@@ -1,0 +1,72 @@
+:root {
+  --background-color: rgba(255, 255, 255, 0.65);
+  --font-color: rgba(0, 0, 0, 0.85);
+  --font-sub-color: rgba(0, 0, 0, 0.55);
+  --font-hover-color: #005fc1;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --background-color: rgba(0, 0, 0, 0.45);
+    --font-color: rgba(255, 255, 255, 0.85);
+    --font-sub-color: rgba(255, 255, 255, 0.55);
+    --font-hover-color: #0090ff;
+  }
+}
+
+.wrapper {
+  font-family: Montserrat, sans-serif;
+  width: 300px;
+  opacity: calc(1);
+  background-color: var(--background-color) !important;
+  padding: 24px 24px 15px 24px;
+  border-radius: 10px;
+  color: var(--font-color);
+}
+
+.header {
+  margin-bottom: 20px;
+}
+
+.appItem {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+  text-decoration: unset;
+  color: var(--font-color);
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.appItem div {
+  flex: 1;
+}
+
+.appItem h5 {
+  margin: 3px 0 5px 0;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.appItem h5:hover {
+  color: var(--font-hover-color);
+}
+
+.appItem p {
+  font-size: 12px;
+  margin: 0;
+  opacity: .6;
+}
+
+.title {
+  font-size: 16px;
+  margin: 0;
+}
+
+.title span {
+  font-size: 12px;
+  margin-left: 15px;
+  font-weight: normal;
+  opacity: .5;
+}

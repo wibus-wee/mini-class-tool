@@ -1,17 +1,26 @@
 :root {
+  --root-background-color: rgb(37, 37, 37);
   --background-color: rgba(255, 255, 255, 0.65);
   --font-color: rgba(0, 0, 0, 0.85);
   --font-sub-color: rgba(0, 0, 0, 0.55);
   --font-hover-color: #005fc1;
 }
 
-@media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: dark) {
   :root {
+    --root-background-color: rgb(221, 221, 221);
     --background-color: rgba(0, 0, 0, 0.45);
     --font-color: rgba(255, 255, 255, 0.85);
     --font-sub-color: rgba(255, 255, 255, 0.55);
     --font-hover-color: #0090ff;
   }
+}
+
+body {
+  background-color: var(--root-background-color);
+  color: var(--font-color);
+  -webkit-transition: all .3s;
+  transition: all .3s;
 }
 
 .wrapper {

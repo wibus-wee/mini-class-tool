@@ -6,12 +6,12 @@ import { getTime } from "./time";
  */
 export const lessonsTime = [{
   index: 1,
-  start: 800,
-  end: 840
+  start: "0800",
+  end: "0840"
 }, {
   index: 2,
-  start: 850,
-  end: 930,
+  start: "0850",
+  end: "0930",
 }, {
   index: 3,
   start: 1000,

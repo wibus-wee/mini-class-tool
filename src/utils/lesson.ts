@@ -1,5 +1,7 @@
+import { useSnapshot } from "valtio";
 import { FridayLessons, MondayLessons, ThursdayLessons, TuesdayLessons, WednesdayLessons } from "../constants/lessonsList";
 import { getTime, transformTime } from "./time";
+import { lessonsInfo as lessonsInfoProxy, lessonsList as lessonsListProxy } from '../states/index'
 
 /**
  * 课程开始时间列表
@@ -50,36 +52,27 @@ export const lessonsTime = [{
  * 当前时间对应的课程索引
  * @returns 当前时间对应的课程索引
  */
-function getTodayLessonList() {
+function getTodayLessonList(list: any) {
+  
   const date = new Date();
-  const day = date.getDay();
-  switch (day) {
-    case 1:
-      return MondayLessons;
-    case 2:
-      return TuesdayLessons;
-    case 3:
-      return WednesdayLessons;
-    case 4:
-      return ThursdayLessons;
-    case 5:
-      return FridayLessons;
-    default:
-      return [];
-  }
+  const day = date.getDay() as 1 | 2 | 3 | 4 | 5;
+  const res = list.data[day];
+  if (!res) return [];
+  return res
 }
 
 /**
  * 如果当前没有课程，将会返回 null
  * @returns 当前时间对应的课程，以及预估接下来的课程
  */
-export function generateLessons(number: number = 1) {
+export function generateLessons(list: any, number: number = 1) {
   const date = new Date();
   const day = date.getDay(); // 今天是周几
-  const Time = Number(getTime()) // 获取当前时间
+  // const Time = Number(getTime()) // 获取当前时间
   // console.log(Time, "当前时间")
-  // const Time = 805;
-  const Today = getTodayLessonList() // 获取今天的课程列表
+  const Time = 805;
+  const Today = getTodayLessonList(list) // 获取今天的课程列表
+  console.log(Today, "今天的课程列表")
   const NowLessonIndex = lessonsTime.find(item => { // 查找当前时间对应的课程时间范围
     return Time >= Number(transformTime(Number(item.start), "subtract", 20)) && Time <= Number(transformTime(Number(item.end), "add", 20))
   })?.index
@@ -118,17 +111,17 @@ export function generateLessons(number: number = 1) {
 
 } // 选择课程
 
-export const generateLessonsList: (number?: number) => {
+export const generateLessonsList: (list: any, number?: number) => {
   [key: string]: {
     name: string,
-    time: {
+    time?: {
       index: number;
       start: string | number;
       end: string | number;
     },
   }
-} = (number: number = 1) => {
-  const Lessons = generateLessons(number)
+} = (list:any, number: number = 1) => {
+  const Lessons = generateLessons(list, number)
   if (!Lessons) return {}
   let res = Object();
   res.now = {

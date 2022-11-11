@@ -3,10 +3,11 @@
  * @author: Wibus
  * @Date: 2022-11-10 23:34:25
  * @LastEditors: Wibus
- * @LastEditTime: 2022-11-11 00:17:16
+ * @LastEditTime: 2022-11-11 15:49:13
  * Coding With IU
  */
 
+import message from "react-message-popup";
 import { lessons } from "../constants/lessonsInfo";
 import { insert } from "../utils/insert";
 import { lessonsTime } from "../utils/lesson";
@@ -25,10 +26,13 @@ export const Item = (props: {
   return (
     <div>
       <a
-        href={`wemeet://page/inmeeting?meeting_code=${dumpid}`}
         onClick={() => {
           navigator.clipboard.writeText(lesson.password);
-        }} className="appItem">
+          message.info(`已复制「${name}」课堂密码`);
+          window.open(`wemeet://page/inmeeting?meeting_code=${dumpid}`);
+        }} className="appItem" style={{
+          cursor: "pointer",
+        }}>
         <div style={{ position: "relative" }}>
           <h5>{props.prefix}课: {props.index} {name} &nbsp;&nbsp; {`${startTime} - ${endTime}`}</h5>
           <p>会议号：{lesson?.id || "null"}</p>

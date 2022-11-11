@@ -72,7 +72,7 @@ export function generateLessons(list: any, number: number = 1) {
   // console.log(Time, "当前时间")
   const Time = 805;
   const Today = getTodayLessonList(list) // 获取今天的课程列表
-  console.log(Today, "今天的课程列表")
+  // console.log(Today, "今天的课程列表")
   const NowLessonIndex = lessonsTime.find(item => { // 查找当前时间对应的课程时间范围
     return Time >= Number(transformTime(Number(item.start), "subtract", 20)) && Time <= Number(transformTime(Number(item.end), "add", 20))
   })?.index

@@ -1,6 +1,7 @@
 :root {
   /* --root-background: rgb(37, 37, 37); */
-  --root-background: url("https://mog.js.org/screen_macos_desktop_light.jpg") no-repeat center center fixed;; 
+  --root-background: url("https://mog.js.org/screen_macos_desktop_light.jpg") no-repeat center center fixed;
+  ;
   --background-color: rgba(255, 255, 255, 0.65);
   --font-color: rgba(0, 0, 0, 0.85);
   --font-sub-color: rgba(0, 0, 0, 0.55);
@@ -10,7 +11,8 @@
 @media (prefers-color-scheme: dark) {
   :root {
     /* --root-background: rgb(221, 221, 221); */
-    --root-background: url("https://mog.js.org/screen_macos_desktop_dark.jpg") no-repeat center center fixed;; 
+    --root-background: url("https://mog.js.org/screen_macos_desktop_dark.jpg") no-repeat center center fixed;
+    ;
     --background-color: rgba(0, 0, 0, 0.45);
     --font-color: rgba(255, 255, 255, 0.85);
     --font-sub-color: rgba(255, 255, 255, 0.55);
@@ -27,6 +29,8 @@ body {
 .wrapper {
   margin-top: 30px;
   margin-left: 30px;
+  -webkit-transition: all .3s;
+  transition: all .3s;
 }
 
 .wrapper {
@@ -39,6 +43,30 @@ body {
   color: var(--font-color);
 }
 
+.settings {
+  /* 直接盖在上方 */
+  position: absolute;
+  top: 0px;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  opacity: calc(0);
+  -webkit-transition: all .3s;
+  transition: all .3s;
+
+  backdrop-filter: blur(10px);
+}
+
+.show {
+  opacity: calc(1);
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+
+.hide {
+  opacity: calc(0);
+  -webkit-transform: translateY(100px);
+  transform: translateY(100px);
+}
 .header {
   margin-bottom: 20px;
   display: flex;

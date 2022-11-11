@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import message from 'react-message-popup'
 import { Item } from './components/item'
 import './main.css'
@@ -10,6 +10,7 @@ import { lessons as lessonsInfo } from './constants/lessonsInfo'
 import { lessonsInfo as lessonsInfoProxy, lessonsList as lessonsListProxy } from './states/index'
 import { FridayLessons, MondayLessons, ThursdayLessons, TuesdayLessons, WednesdayLessons } from './constants/lessonsList'
 import { useSnapshot } from 'valtio'
+import { Setting } from './components/setting'
 
 function App() {
 
@@ -19,19 +20,16 @@ function App() {
     })
   }, [])
 
-  const lessonsInfoSnapshot = useSnapshot(lessonsInfoProxy)
   const lessonsListSnapshot = useSnapshot(lessonsListProxy)
 
   const [lessons, setLessons] = useStorage("lessonsInfo", lessonsInfo)
   const [lessonsList, setLessonsList] = useStorage("lessonsList", { 1: MondayLessons, 2: TuesdayLessons, 3: WednesdayLessons, 4: ThursdayLessons, 5: FridayLessons, })
+  const [data, setData] = useState(generateLessonsList(lessonsListProxy))
 
   useEffect(() => {
     lessonsInfoProxy.data = lessons
     lessonsListProxy.data = lessonsList
   }, [lessons, lessonsList])
-
-  
-  const [data, setData] = useState(generateLessonsList(lessonsListProxy))
 
   useEffect(() => {
     setData(generateLessonsList(lessonsListProxy))
@@ -47,34 +45,42 @@ function App() {
     }
   }, [])
 
+  const childRef = useRef<any>()
+
   return (
-    <div className={"wrapper"}>
-      <div className={"header"}>
-        <h3 className={"title"}>
-          课表小公举
-          <span>每 1 分钟刷新 &nbsp;&nbsp;&nbsp; By Wibus.</span>
-        </h3>
-        <span className="svg">
-          <FontAwesomeIcon icon={faGear} />
-        </span>
+    <>
+      <div className={"wrapper"}>
+        <div className={"header"}>
+          <h3 className={"title"}>
+            课表小公举
+            <span>每 1 分钟刷新 &nbsp;&nbsp;&nbsp; By Wibus.</span>
+          </h3>
+          <span className="svg" onClick={() => {
+            childRef.current?.open()
+          }}>
+            <FontAwesomeIcon icon={faGear} />
+          </span>
+        </div>
+
+        {
+          Object.keys(data).map((key, index) => {
+            const PREFIX = index === 0 ? "现在的" : index === 1 ? "下一节" : index === 2 ? "下下节" : "下下下节"
+            // console.log(data[key])
+            return (
+              <Item
+                key={key}
+                index={data[key].time?.index || 0}
+                name={data[key].name}
+                prefix={`${PREFIX}`}
+              />
+            )
+          })
+        }
       </div>
-
-      {
-        Object.keys(data).map((key, index) => {
-          const PREFIX = index === 0 ? "现在的" : index === 1 ? "下一节" : index === 2 ? "下下节" : "下下下节"
-          // console.log(data[key])
-          return (
-            <Item
-              key={key}
-              index={data[key].time?.index || 0}
-              name={data[key].name}
-              prefix={`${PREFIX}`}
-            />
-          )
-        })
-      }
-
-    </div>
+      <Setting
+        cRef={childRef}
+      />
+    </>
   )
 }
 

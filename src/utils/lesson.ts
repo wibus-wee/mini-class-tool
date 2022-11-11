@@ -1,5 +1,5 @@
 import { FridayLessons, MondayLessons, ThursdayLessons, TuesdayLessons, WednesdayLessons } from "../constants/lessonsList";
-import { getTime } from "./time";
+import { getTime, transformTime } from "./time";
 
 /**
  * 课程开始时间列表
@@ -76,11 +76,12 @@ function getTodayLessonList() {
 export function generateLessons(number: number = 1) {
   const date = new Date();
   const day = date.getDay(); // 今天是周几
-  // const Time = Number(getTime()) // 获取当前时间
-  const Time = 1020;
+  const Time = Number(getTime()) // 获取当前时间
+  // console.log(Time, "当前时间")
+  // const Time = 805;
   const Today = getTodayLessonList() // 获取今天的课程列表
   const NowLessonIndex = lessonsTime.find(item => { // 查找当前时间对应的课程时间范围
-    return Time >= item.start && Time <= item.end
+    return Time >= Number(transformTime(Number(item.start), "subtract", 20)) && Time <= Number(transformTime(Number(item.end), "add", 20))
   })?.index
 
   if (!NowLessonIndex) return null // 如果当前没有课程，将会返回 null
@@ -132,19 +133,19 @@ export const generateLessonsList: (number?: number) => {
   let res = Object();
   res.now = {
     name: Lessons?.NowLesson.name,
-    time: lessonsTime[Lessons.NowLesson.index - 1]
+    time: lessonsTime[Lessons.NowLesson.index]
   }
   res.next = {
     name: Lessons?.NextLesson.name,
-    time: lessonsTime[Lessons.NextLesson.index - 1]
+    time: lessonsTime[Lessons.NextLesson.index]
   }
   res.next2 = {
     name: Lessons?.Next2Lesson.name,
-    time: lessonsTime[Lessons.Next2Lesson.index - 1]
+    time: lessonsTime[Lessons.Next2Lesson.index]
   }
   res.next3 = {
     name: Lessons?.Next3Lesson.name,
-    time: lessonsTime[Lessons.Next3Lesson.index - 1]
+    time: lessonsTime[Lessons.Next3Lesson.index]
   }
   return res
 }

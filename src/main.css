@@ -43,6 +43,27 @@ body {
   color: var(--font-color);
 }
 
+.settingsWrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  background-color: rgba(255, 255, 255, 0.5);
+  /* 铺满页面 */
+  width: 100%;
+  height: 100%;
+  /* 铺满页面 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+  z-index: 999;
+  overflow: scroll;
+  /* height: 100vh; */
+}
+
 .settings {
   /* 直接盖在上方 */
   position: absolute;
@@ -50,10 +71,12 @@ body {
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 999;
   opacity: calc(0);
-  -webkit-transition: all .3s;
-  transition: all .3s;
-
-  backdrop-filter: blur(10px);
+  -webkit-transition: all .4s;
+  transition: all .4s;
+  backdrop-filter: blur(20px);
+  overflow: scroll;
+  bottom: 0;
+  width: auto;
 }
 
 .show {
@@ -67,6 +90,7 @@ body {
   -webkit-transform: translateY(100px);
   transform: translateY(100px);
 }
+
 .header {
   margin-bottom: 20px;
   display: flex;
@@ -121,9 +145,113 @@ body {
   margin: 0;
 }
 
-.title span {
+.title span, .tips {
   font-size: 12px;
   margin-left: 15px;
   font-weight: normal;
   opacity: .5;
+}
+
+
+.setting {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.setting span {
+  margin-left: 10px;
+  font-size: 12px;
+  opacity: .5;
+}
+
+.setting span:hover {
+  opacity: 1;
+}
+
+textarea, input {
+  transition: all .3s;
+  border: none;
+  outline: none;
+}
+
+
+.setting textarea {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  width: 100%;
+  height: 100px;
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.05);
+  color: var(--font-color);
+  font-size: 12px;
+  resize: none;
+}
+
+.setting input {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  width: 100%;
+  height: 30px;
+  margin-top: 10px;
+  padding: 0 10px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.05);
+  color: var(--font-color);
+  font-size: 12px;
+}
+
+textarea:focus, input:focus {
+  /* 稍微变黑 */
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.618);
+}
+
+:disabled {
+  opacity: .5;
+}
+
+:disabled:hover {
+  opacity: 1;
+}
+
+.settingsList {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  flex-direction: row;
+}
+
+.settingsList > div {
+  width: 50%;
+  margin-bottom: 20px;
+}
+
+.label {
+  position: relative;
+}
+
+.label:before {
+  content: attr(data-label);
+  font-size: 12px;
+  opacity: 0;
+  margin-left: 5px;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 5px 10px;
+  border-radius: 5px;
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translate(-50%);
+  text-align: center;
+  width: 50px;
+  transition: all .5s;
+}
+
+.label:hover:before {
+  opacity: 1;
 }

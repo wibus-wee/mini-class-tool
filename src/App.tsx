@@ -21,9 +21,10 @@ function App() {
   }, [])
 
   const lessonsListSnapshot = useSnapshot(lessonsListProxy)
+  const lessonsInfoSnapshot = useSnapshot(lessonsInfoProxy)
 
-  const [lessons, setLessons] = useStorage("lessonsInfo", lessonsInfo)
-  const [lessonsList, setLessonsList] = useStorage("lessonsList", { 1: MondayLessons, 2: TuesdayLessons, 3: WednesdayLessons, 4: ThursdayLessons, 5: FridayLessons, })
+  const [lessons, setLessonsStorge] = useStorage("lessonsInfo", lessonsInfo)
+  const [lessonsList, setLessonsListStorge] = useStorage("lessonsList", { 1: MondayLessons, 2: TuesdayLessons, 3: WednesdayLessons, 4: ThursdayLessons, 5: FridayLessons, })
   const [data, setData] = useState(generateLessonsList(lessonsListProxy))
 
   useEffect(() => {
@@ -45,6 +46,16 @@ function App() {
     }
   }, [])
 
+  useEffect(() => {
+    window.addEventListener('beforeunload', (e) => {
+      e.preventDefault();
+      e.returnValue = '';
+      // save the proxy data into localstorge
+      setLessonsListStorge(lessonsListProxy.data)
+      setLessonsStorge(lessonsInfoProxy.data)
+    })
+  }, [])
+
   const childRef = useRef<any>()
 
   return (
@@ -55,7 +66,7 @@ function App() {
             课表小公举
             <span>每 1 分钟刷新 &nbsp;&nbsp;&nbsp; By Wibus.</span>
           </h3>
-          <span className="svg" onClick={() => {
+          <span data-label="进入设置" className="label svg" onClick={() => {
             childRef.current?.open()
           }}>
             <FontAwesomeIcon icon={faGear} />
@@ -77,6 +88,7 @@ function App() {
           })
         }
       </div>
+
       <Setting
         cRef={childRef}
       />

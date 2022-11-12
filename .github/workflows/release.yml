@@ -1,8 +1,10 @@
+
 name: Release CI
 
 
 on:
   push:
+
     tags:
       - 'v*'
 
@@ -17,13 +19,25 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: Query version number
+        id: get_version
+        shell: bash
+        run: |
+          echo "using version tag ${GITHUB_REF:10}"
+          echo ::set-output name=version::"${GITHUB_REF:10}"
+
+
       - name: Create Release
         id: create_release
-        run: npx changelogithub
+        uses: actions/create-release@v1
         env:
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: '${{ steps.get_version.outputs.VERSION }}'
+          release_name: 'app ${{ steps.get_version.outputs.VERSION }}'
+          body: '从 Assets 中下载对应的版本并进行安装 <br /> 您可以在[这里](https://github.com/wibus-wee/mini-class-tool/blob/main/CHANGELOG.md)看到更改日志'
   
-  # 编译 Tauri reference: https://zhuanlan.zhihu.com/p/533828038
+  # 编译 Tauri
   build-tauri:
     needs: create-release
     strategy:

@@ -65,7 +65,13 @@
         "hiddenTitle": true,
         "titleBarStyle": "Overlay",
         "acceptFirstMouse": true,
-        "transparent": true
+        "transparent": true,
+        "maxHeight": 360,
+        "maxWidth": 348,
+        "minHeight": 360,
+        "minWidth": 348,
+        "x": 100,
+        "y": 100
       }
     ]
   }

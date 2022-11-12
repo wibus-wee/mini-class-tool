@@ -4,7 +4,7 @@ import message from 'react-message-popup'
 import { Item } from './components/item'
 import './main.css'
 import { generateLessonsList } from './utils/lesson'
-import { faGear } from '@fortawesome/free-solid-svg-icons'
+import { faGear, faGift } from '@fortawesome/free-solid-svg-icons'
 import useStorage from './hooks/useStorage'
 import { lessons as lessonsInfo } from './constants/lessonsInfo'
 import { lessonsInfo as lessonsInfoProxy, lessonsList as lessonsListProxy } from './states/index'
@@ -12,6 +12,7 @@ import { FridayLessons, MondayLessons, ThursdayLessons, TuesdayLessons, Wednesda
 import { useSnapshot } from 'valtio'
 import { Setting } from './components/setting'
 import { window as tauriWindow } from "@tauri-apps/api";
+import { Sponsor } from './components/sponsor'
 
 function App() {
 
@@ -59,6 +60,7 @@ function App() {
 
 
   const childRef = useRef<any>()
+  const childSponsorRef = useRef<any>()
 
   return (
     <>
@@ -68,6 +70,11 @@ function App() {
             课表小公举
             <span>每 1 分钟刷新 &nbsp;&nbsp;&nbsp; By Wibus.</span>
           </h3>
+          <span data-label="Sponsor" className="label svg" onClick={() => {
+            childSponsorRef.current?.open()
+          }}>
+            <FontAwesomeIcon icon={faGift} />
+          </span>
           <span data-label="进入设置" className="label svg" onClick={() => {
             childRef.current?.open()
           }}>
@@ -93,6 +100,10 @@ function App() {
 
       <Setting
         cRef={childRef}
+      />
+
+      <Sponsor 
+        cRef={childSponsorRef}
       />
     </>
   )

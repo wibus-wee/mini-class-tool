@@ -3,7 +3,7 @@
  * @author: Wibus
  * @Date: 2022-11-11 22:56:27
  * @LastEditors: Wibus
- * @LastEditTime: 2022-11-12 17:45:57
+ * @LastEditTime: 2022-11-12 22:58:20
  * Coding With IU
  */
 
@@ -75,10 +75,6 @@ export const Setting: React.FC<PropsWithRef<any>> = (props) => {
     setLessons(lessonsInfoSnapshot.data)
     _setLessonsList(lessonsListSnapshot.data)
   }, [lessonsListSnapshot, lessonsInfoSnapshot])
-
-  const saveData = () => {
-
-  }
 
   const lessonsNameList = ['语文', '数学', '英语', '物理', '化学', '政治', '历史', '地理', '生物', '班主任']
 

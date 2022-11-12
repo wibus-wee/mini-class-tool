@@ -9,7 +9,7 @@
   },
   "package": {
     "productName": "课堂小帮手",
-    "version": "0.1.0"
+    "version": "2.0.0-alpha.2"
   },
   "tauri": {
     "allowlist": {

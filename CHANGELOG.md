@@ -1,5 +1,9 @@
 # CHANGELOG
 
+# [2.0.0-alpha.11](https://github.com/wibus-wee/mini-class-tool/compare/v2.0.0-alpha.10...v2.0.0-alpha.11) (2022-11-12)
+
+
+
 # [2.0.0-alpha.10](https://github.com/wibus-wee/mini-class-tool/compare/v2.0.0-alpha.9...v2.0.0-alpha.10) (2022-11-12)
 
 

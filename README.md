@@ -10,12 +10,19 @@
 - [x] 自动获取课堂密码并自动复制进入剪贴板（✨新功能）
 - [x] 自定义配置（✨新功能）
 - [x] 原生夜间模式
-- [ ] 电脑端 Tauri App
+- [x] 电脑端 Tauri App
 
 ## Usage
 
-- 前往在线版本：[https://miniclass.vercel.app/](https://miniclass.vercel.app/)
-- 前往 Release 获取本地App
+- 前往在线版本：[https://mini-class-tool.iucky.cn/](https://mini-class-tool.iucky.cn/)
+- 前往 Release 获取本地App 目前支持：Windows，Mac，Linux
+
+## System Requirements
+
+- Windows 7+ / macOS 10.15+ / Linux (仅保证可支持 Ubuntu 20.04+)
+- 10MB+ 硬盘空间
+- 1GB+ 内存
+
 
 ## Principle
 

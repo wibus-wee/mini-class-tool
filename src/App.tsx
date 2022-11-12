@@ -11,6 +11,7 @@ import { lessonsInfo as lessonsInfoProxy, lessonsList as lessonsListProxy } from
 import { FridayLessons, MondayLessons, ThursdayLessons, TuesdayLessons, WednesdayLessons } from './constants/lessonsList'
 import { useSnapshot } from 'valtio'
 import { Setting } from './components/setting'
+import { window as tauriWindow } from "@tauri-apps/api";
 
 function App() {
 
@@ -56,11 +57,12 @@ function App() {
     })
   }, [])
 
+
   const childRef = useRef<any>()
 
   return (
     <>
-      <div className={"wrapper"}>
+      <div data-tauri-drag-region className={"wrapper"}>
         <div className={"header"}>
           <h3 className={"title"}>
             课表小公举

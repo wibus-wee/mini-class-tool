@@ -5,6 +5,9 @@ specifiers:
   '@fortawesome/free-regular-svg-icons': ^6.2.0
   '@fortawesome/free-solid-svg-icons': ^6.2.0
   '@fortawesome/react-fontawesome': ^0.2.0
+  '@tauri-apps/api': ^1.2.0
+  '@tauri-apps/cli': ^1.2.0
+  '@types/node': ^18.11.9
   '@types/react': ^18.0.24
   '@types/react-dom': ^18.0.8
   '@vitejs/plugin-react': ^2.2.0
@@ -21,6 +24,7 @@ dependencies:
   '@fortawesome/free-regular-svg-icons': 6.2.0
   '@fortawesome/free-solid-svg-icons': 6.2.0
   '@fortawesome/react-fontawesome': 0.2.0_6j2wdqxompc6mcokhxkpep2gqu
+  '@tauri-apps/api': 1.2.0
   dayjs: 1.11.6
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
@@ -28,11 +32,13 @@ dependencies:
   valtio: 1.7.5_react@18.2.0+vite@3.2.3
 
 devDependencies:
+  '@tauri-apps/cli': 1.2.0
+  '@types/node': 18.11.9
   '@types/react': 18.0.25
   '@types/react-dom': 18.0.8
   '@vitejs/plugin-react': 2.2.0_vite@3.2.3
   typescript: 4.8.4
-  vite: 3.2.3
+  vite: 3.2.3_@types+node@18.11.9
 
 packages:
 
@@ -398,6 +404,111 @@ packages:
       '@jridgewell/sourcemap-codec': 1.4.14
     dev: true
 
+  /@tauri-apps/api/1.2.0:
+    resolution: {integrity: sha512-lsI54KI6HGf7VImuf/T9pnoejfgkNoXveP14pVV7XarrQ46rOejIVJLFqHI9sRReJMGdh2YuCoI3cc/yCWCsrw==}
+    engines: {node: '>= 14.6.0', npm: '>= 6.6.0', yarn: '>= 1.19.1'}
+    dev: false
+
+  /@tauri-apps/cli-darwin-arm64/1.2.0:
+    resolution: {integrity: sha512-f3LR2RvTU2ulxYdK9Nc3vKaSpDChu52pz0BMWNrSs3dxs4WTVioie98Ufz+GorifkUp3sYXcJte3HzX6wH/QxQ==}
+    engines: {node: '>= 10'}
+    cpu: [arm64]
+    os: [darwin]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@tauri-apps/cli-darwin-x64/1.2.0:
+    resolution: {integrity: sha512-m07QZaAZCtyobrjddfz/Rxf9GGutnBOpRMbNqVqCk0qKRJzHG1fIsLqkgZh6+qPv0zHpu7xi/FPcqTec72Cp8w==}
+    engines: {node: '>= 10'}
+    cpu: [x64]
+    os: [darwin]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@tauri-apps/cli-linux-arm-gnueabihf/1.2.0:
+    resolution: {integrity: sha512-Id9eF1JtthZRFVtXAAVtSlI3uMT8cJ7LYmCSIl3mAXEUeaPBxnUs1i9X6/J+2Ho3yLEuuOxJ7PaJd+4v8wnEeg==}
+    engines: {node: '>= 10'}
+    cpu: [arm]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@tauri-apps/cli-linux-arm64-gnu/1.2.0:
+    resolution: {integrity: sha512-NtfPkkpeMPl+i/tB/Fc8ST2rKO2vV8int/RkOvNGLCkhWcl4sbzKBol7tc4q8c8h0X7FXDcF1l/EOuGsZUAA5Q==}
+    engines: {node: '>= 10'}
+    cpu: [arm64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@tauri-apps/cli-linux-arm64-musl/1.2.0:
+    resolution: {integrity: sha512-tz+mOOVsy/TMdq2WJVIJl/iwW3OCWCyD5Fls3fhyJ4XpLfjn4G+C+oU0awXD/0se0ko81aq4D+r8eDx6oBRi0A==}
+    engines: {node: '>= 10'}
+    cpu: [arm64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@tauri-apps/cli-linux-x64-gnu/1.2.0:
+    resolution: {integrity: sha512-FH/wU+OWZjRQvrq/oequScr72I84XgOuRuMEpt/GqGD341cBJ8ithpoyzuiKsvjS6K0qMyRFzy3eyhQ7gwX+4Q==}
+    engines: {node: '>= 10'}
+    cpu: [x64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@tauri-apps/cli-linux-x64-musl/1.2.0:
+    resolution: {integrity: sha512-nLg30aBT9fI83sjIqaGPN7twbtE5LJy2DbKzxIlw59F+GT8HBdiM/2mZdTLB3AQb52yVHuGB1TVtWDsl0JHqCA==}
+    engines: {node: '>= 10'}
+    cpu: [x64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@tauri-apps/cli-win32-ia32-msvc/1.2.0:
+    resolution: {integrity: sha512-eXtgIgY0fawgcOuUjH8Y6PxwPxbK87Zl9XmA7Q0m58T7pIz+gcbgvtH8Bb+liYHoRYItIhQxVm+ui7Y59rI7Cg==}
+    engines: {node: '>= 10'}
+    cpu: [ia32]
+    os: [win32]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@tauri-apps/cli-win32-x64-msvc/1.2.0:
+    resolution: {integrity: sha512-egyM66R05AIbkaUDptpHurFTIYp3VM4H5OrRd3O2b0oXf8SoiXiyrHbQsHVHHDYyytKmwkdNqjdy+Vev/Vq25Q==}
+    engines: {node: '>= 10'}
+    cpu: [x64]
+    os: [win32]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@tauri-apps/cli/1.2.0:
+    resolution: {integrity: sha512-DgUnk4p/atWHq2HUx9Vt+/LuRsx4iFlkzdZIUxtFWvpcZih2k0TzmHJbrhM1evh1/7a+SqiwDawmyf3Hz1HxXA==}
+    engines: {node: '>= 10'}
+    hasBin: true
+    optionalDependencies:
+      '@tauri-apps/cli-darwin-arm64': 1.2.0
+      '@tauri-apps/cli-darwin-x64': 1.2.0
+      '@tauri-apps/cli-linux-arm-gnueabihf': 1.2.0
+      '@tauri-apps/cli-linux-arm64-gnu': 1.2.0
+      '@tauri-apps/cli-linux-arm64-musl': 1.2.0
+      '@tauri-apps/cli-linux-x64-gnu': 1.2.0
+      '@tauri-apps/cli-linux-x64-musl': 1.2.0
+      '@tauri-apps/cli-win32-ia32-msvc': 1.2.0
+      '@tauri-apps/cli-win32-x64-msvc': 1.2.0
+    dev: true
+
+  /@types/node/18.11.9:
+    resolution: {integrity: sha512-CRpX21/kGdzjOpFsZSkcrXMGIBWMGNIHXXBVFSH+ggkftxg+XYP20TESbh+zFvFj3EQOl5byk0HTRn1IL6hbqg==}
+
   /@types/prop-types/15.7.5:
     resolution: {integrity: sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==}
     dev: true
@@ -433,7 +544,7 @@ packages:
       '@babel/plugin-transform-react-jsx-source': 7.19.6_@babel+core@7.20.2
       magic-string: 0.26.7
       react-refresh: 0.14.0
-      vite: 3.2.3
+      vite: 3.2.3_@types+node@18.11.9
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -953,10 +1064,10 @@ packages:
       proxy-compare: 2.3.0
       react: 18.2.0
       use-sync-external-store: 1.2.0_react@18.2.0
-      vite: 3.2.3
+      vite: 3.2.3_@types+node@18.11.9
     dev: false
 
-  /vite/3.2.3:
+  /vite/3.2.3_@types+node@18.11.9:
     resolution: {integrity: sha512-h8jl1TZ76eGs3o2dIBSsvXDLb1m/Ec1iej8ZMdz+PsaFUsftZeWe2CZOI3qogEsMNaywc17gu0q6cQDzh/weCQ==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
@@ -981,6 +1092,7 @@ packages:
       terser:
         optional: true
     dependencies:
+      '@types/node': 18.11.9
       esbuild: 0.15.13
       postcss: 8.4.18
       resolve: 1.22.1

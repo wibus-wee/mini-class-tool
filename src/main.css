@@ -20,15 +20,18 @@
 }
 
 body {
-  background: var(--root-background);
+  margin: 0;
+  /* background: var(--root-background); */
   color: var(--font-color);
   -webkit-transition: all .3s;
   transition: all .3s;
+  font-family: Montserrat, sans-serif;
+  overflow: hidden;
 }
 
 .wrapper {
-  margin-top: 30px;
-  margin-left: 30px;
+  /* margin-top: 30px; */
+  /* margin-left: 30px; */
   -webkit-transition: all .3s;
   transition: all .3s;
 }
@@ -103,6 +106,7 @@ body {
 }
 
 .header {
+  margin-top: 10px;
   margin-bottom: 20px;
   display: flex;
   align-items: center;

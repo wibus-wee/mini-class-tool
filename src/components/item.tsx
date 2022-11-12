@@ -3,7 +3,7 @@
  * @author: Wibus
  * @Date: 2022-11-10 23:34:25
  * @LastEditors: Wibus
- * @LastEditTime: 2022-11-11 15:49:13
+ * @LastEditTime: 2022-11-12 22:30:14
  * Coding With IU
  */
 
@@ -26,10 +26,10 @@ export const Item = (props: {
   return (
     <div>
       <a
+        href={`wemeet://page/inmeeting?meeting_code=${dumpid}`}
         onClick={() => {
           navigator.clipboard.writeText(lesson.password);
           message.info(`已复制「${name}」课堂密码`);
-          window.open(`wemeet://page/inmeeting?meeting_code=${dumpid}`);
         }} className="appItem" style={{
           cursor: "pointer",
         }}>

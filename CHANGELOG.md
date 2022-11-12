@@ -1,5 +1,15 @@
 # CHANGELOG
 
+# [2.0.0-alpha.6](https://github.com/wibus-wee/mini-class-tool/compare/v2.0.0-alpha.5...v2.0.0-alpha.6) (2022-11-12)
+
+
+### Bug Fixes
+
+* default value ([d0e46e7](https://github.com/wibus-wee/mini-class-tool/commit/d0e46e715c7b98f4911c1ffd833b9d68ab731866))
+* set `wix` config ([4f2e59d](https://github.com/wibus-wee/mini-class-tool/commit/4f2e59d1933ccab430bae5488df5a7738ef41b12))
+
+
+
 # [2.0.0-alpha.5](https://github.com/wibus-wee/mini-class-tool/compare/v2.0.0-alpha.4...v2.0.0-alpha.5) (2022-11-12)
 
 

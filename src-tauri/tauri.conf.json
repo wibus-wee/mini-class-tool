@@ -8,7 +8,7 @@
     "withGlobalTauri": true
   },
   "package": {
-    "productName": "mini-class-tool",
+    "productName": "课堂小帮手",
     "version": "0.1.0"
   },
   "tauri": {
@@ -31,7 +31,7 @@
         "icons/icon.icns",
         "icons/icon.ico"
       ],
-      "identifier": "com.tauri.dev",
+      "identifier": "com.wibus.works.mini-class-tool",
       "longDescription": "",
       "macOS": {
         "entitlements": null,
@@ -60,7 +60,7 @@
         "fullscreen": false,
         "height": 360,
         "resizable": true,
-        "title": "mini-class-tool",
+        "title": "课堂小帮手",
         "width": 348,
         "hiddenTitle": true,
         "titleBarStyle": "Overlay",

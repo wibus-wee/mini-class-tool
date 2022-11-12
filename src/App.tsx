@@ -40,7 +40,7 @@ function App() {
   useEffect(() => {
     const timer = setInterval(() => {
       setData(generateLessonsList(lessonsListProxy))
-      message.info('Auto update running successfully')
+      message.info('Auto Update')
     }, 1000 * 60 * 1)
     return () => {
       clearInterval(timer)

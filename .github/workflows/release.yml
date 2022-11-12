@@ -33,8 +33,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: '${{ steps.get_version.outputs.VERSION }}'
-          release_name: 'MCT-${{ steps.get_version.outputs.VERSION }}'
+          tag_name: '${{ steps.get_version.outputs.version }}'
+          release_name: 'MCT-${{ steps.get_version.outputs.version }}'
           body: '从 Assets 中下载对应的版本并进行安装 <br /> 您可以在[这里](https://github.com/wibus-wee/mini-class-tool/blob/main/CHANGELOG.md)看到更改日志'
   
   # 编译 Tauri

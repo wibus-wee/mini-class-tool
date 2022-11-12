@@ -3,7 +3,7 @@
  * @author: Wibus
  * @Date: 2022-11-11 22:56:27
  * @LastEditors: Wibus
- * @LastEditTime: 2022-11-12 17:09:57
+ * @LastEditTime: 2022-11-12 17:45:57
  * Coding With IU
  */
 
@@ -150,6 +150,7 @@ export const Setting: React.FC<PropsWithRef<any>> = (props) => {
               lessonsNameList.map((item, index) => {
                 return (
                   <InfoSettingItem
+                    key={index}
                     name={`${item} ID`}
                     subject={item}
                     type="id"
@@ -164,6 +165,7 @@ export const Setting: React.FC<PropsWithRef<any>> = (props) => {
               lessonsNameList.map((item, index) => {
                 return (
                   <InfoSettingItem
+                    key={index}
                     name={`${item} 密码`}
                     subject={item}
                     type="password"

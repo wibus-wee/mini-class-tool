@@ -56,6 +56,7 @@ function getTodayLessonList(list: any) {
   
   const date = new Date();
   const day = date.getDay() as 1 | 2 | 3 | 4 | 5;
+  // const day = 1
   const res = list.data[day];
   if (!res) return [];
   return res
@@ -67,10 +68,9 @@ function getTodayLessonList(list: any) {
  */
 export function generateLessons(list: any, number: number = 1) {
   const date = new Date();
-  const day = date.getDay(); // 今天是周几
-  // const Time = Number(getTime()) // 获取当前时间
+  const Time = Number(getTime()) // 获取当前时间
   // console.log(Time, "当前时间")
-  const Time = 805;
+  // const Time = 805;
   const Today = getTodayLessonList(list) // 获取今天的课程列表
   // console.log(Today, "今天的课程列表")
   const NowLessonIndex = lessonsTime.find(item => { // 查找当前时间对应的课程时间范围

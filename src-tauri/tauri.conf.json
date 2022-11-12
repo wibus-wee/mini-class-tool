@@ -8,7 +8,7 @@
     "withGlobalTauri": true
   },
   "package": {
-    "productName": "课堂小帮手",
+    "productName": "课堂小公举",
     "version": "2.0.0-alpha.2"
   },
   "tauri": {
@@ -60,7 +60,7 @@
         "fullscreen": false,
         "height": 360,
         "resizable": true,
-        "title": "课堂小帮手",
+        "title": "课堂小公举",
         "width": 348,
         "hiddenTitle": true,
         "titleBarStyle": "Overlay",

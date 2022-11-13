@@ -1,7 +1,7 @@
 :root {
   /* --root-background: rgb(37, 37, 37); */
   --root-background: url("/screen_macos_desktop_light.jpg") no-repeat center center fixed;
-  --background-color: rgba(255, 255, 255, 0.65);
+  --background-color: rgba(255, 255, 255, 0.8);
   --font-color: rgba(0, 0, 0, 0.85);
   --font-sub-color: rgba(0, 0, 0, 0.55);
   --font-hover-color: #0090ff;
@@ -104,7 +104,7 @@ body {
 }
 
 .header {
-  margin-top: 10px;
+  margin-top: 25px;
   margin-bottom: 20px;
   display: flex;
   align-items: center;
@@ -257,7 +257,7 @@ textarea:focus, input:focus {
   content: attr(data-label);
   font-size: 12px;
   opacity: 0;
-  margin-left: 5px;
+  margin-left: 0px;
   background-color: rgba(0, 0, 0, 0.1);
   padding: 5px 10px;
   border-radius: 5px;
@@ -272,4 +272,10 @@ textarea:focus, input:focus {
 
 .label:hover:before {
   opacity: 1;
+}
+
+@media (prefers-color-scheme: dark) {
+  .label:before {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
 }

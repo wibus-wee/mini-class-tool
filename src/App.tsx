@@ -67,7 +67,13 @@ function App() {
       <div data-tauri-drag-region className={"wrapper"}>
         <div className={"header"}>
           <h3 className={"title"}>
-            课表小公举
+            <a
+              className='label'
+              data-label="前往本班"
+              href={`wemeet://page/inmeeting?meeting_code=${
+                lessonsInfoSnapshot.data["班主任"]?.id?.replace(/-/g, "") || "0000000000"
+              }`}
+              >课表小公举</a>
             <span>每 1 分钟刷新 &nbsp;&nbsp;&nbsp; By Wibus.</span>
           </h3>
           <span data-label="Sponsor" className="label svg" onClick={() => {
@@ -102,7 +108,7 @@ function App() {
         cRef={childRef}
       />
 
-      <Sponsor 
+      <Sponsor
         cRef={childSponsorRef}
       />
     </>

@@ -1,5 +1,19 @@
 # CHANGELOG
 
+# [2.0.0-alpha.15](https://github.com/wibus-wee/mini-class-tool/compare/v2.0.0-alpha.14...v2.0.0-alpha.15) (2022-11-13)
+
+
+### Features
+
+* go to our classroom [skip ci] ([6ab9a0b](https://github.com/wibus-wee/mini-class-tool/commit/6ab9a0b5bc8e8a02305bdf40e45fc2cad64a0b18))
+
+
+### Performance Improvements
+
+* change product name ([59cfb64](https://github.com/wibus-wee/mini-class-tool/commit/59cfb6475bd11721d9dd5cb81be77204288ecf4b))
+
+
+
 # [2.0.0-alpha.14](https://github.com/wibus-wee/mini-class-tool/compare/v2.0.0-alpha.13...v2.0.0-alpha.14) (2022-11-13)
 
 

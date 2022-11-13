@@ -20,10 +20,9 @@
 
 ## System Requirements
 
-- Windows （不保证） / macOS 10.15+
+- macOS 10.15+ / Windows 7+（为了保证 7 能正常启动，Windows 的安装包将会增加 1～2MB 的大小以为 Windows 7 WebView2 提供支持）
 - 10MB+ 硬盘空间
 - 1GB+ 内存
-
 
 > **Warning**
 >

@@ -1,5 +1,19 @@
 # CHANGELOG
 
+# [2.0.0-alpha.12](https://github.com/wibus-wee/mini-class-tool/compare/v2.0.0-alpha.11...v2.0.0-alpha.12) (2022-11-13)
+
+
+### Bug Fixes
+
+* use vars lessons [skip ci] ([7f26092](https://github.com/wibus-wee/mini-class-tool/commit/7f260927ffdef84f3852f94b8fe386f200dedec3))
+
+
+### Performance Improvements
+
+* development variable optimization ([6320d92](https://github.com/wibus-wee/mini-class-tool/commit/6320d92d399596511cca69697c02487a506a2e20))
+
+
+
 # [2.0.0-alpha.11](https://github.com/wibus-wee/mini-class-tool/compare/v2.0.0-alpha.10...v2.0.0-alpha.11) (2022-11-12)
 
 

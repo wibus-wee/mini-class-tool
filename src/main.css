@@ -19,7 +19,6 @@
 
 body {
   margin: 0;
-  /** only web **/ background: var(--root-background);
   color: var(--font-color);
   -webkit-transition: all .3s;
   transition: all .3s;
@@ -294,4 +293,16 @@ textarea:focus, input:focus {
   textarea:focus, input:focus {
     border: 1px solid rgba(255, 255, 255, 1);
   }
+}
+
+/* only app dev */
+
+.dev.wrapper {
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+}
+
+.dev .header {
+  margin-top: 25px;
 }

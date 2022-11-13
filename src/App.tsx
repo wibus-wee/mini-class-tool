@@ -63,7 +63,16 @@ function App() {
 
   return (
     <>
-      <div data-tauri-drag-region className={"wrapper"}>
+      <style>
+        {`
+          body {
+            ${process.env.NODE_ENV === 'development' ? '' : 'background: var(--root-background);'}
+          }
+        `}
+      </style>
+      <div data-tauri-drag-region className={`wrapper ${
+        process.env.NODE_ENV === 'development' ? 'dev' : ''
+      }`}>
         <div className={"header"}>
           <h3 className={"title"}>
             <a

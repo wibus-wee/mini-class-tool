@@ -1,5 +1,14 @@
 # CHANGELOG
 
+## [2.0.4](https://github.com/wibus-wee/mini-class-tool/compare/v2.0.3...v2.0.4) (2022-11-13)
+
+
+### Performance Improvements
+
+* darkmode element style [skip ci] ([4fccb17](https://github.com/wibus-wee/mini-class-tool/commit/4fccb17bbe4b5ecc4016a0c6feae8b442ce4493b))
+
+
+
 ## [2.0.3](https://github.com/wibus-wee/mini-class-tool/compare/v2.0.2...v2.0.3) (2022-11-13)
 
 

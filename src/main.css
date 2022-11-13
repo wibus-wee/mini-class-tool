@@ -163,6 +163,12 @@ body {
   margin-left: 15px;
   font-weight: normal;
   opacity: .5;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.title span:hover, .tips:hover {
+  opacity: 1;
 }
 
 .title a {
@@ -183,6 +189,8 @@ body {
   margin-left: 10px;
   font-size: 12px;
   opacity: .5;
+  -webkit-transition: all .3s;
+  transition: all .3s;
 }
 
 .setting span:hover {
@@ -223,10 +231,12 @@ textarea, input {
   font-size: 12px;
 }
 
+textarea:hover, input:hover {
+  border: 1px solid rgba(0, 0, 0, 0.4);
+}
 textarea:focus, input:focus {
-  /* 稍微变黑 */
   outline: none;
-  border: 1px solid rgba(0, 0, 0, 0.618);
+  border: 1px solid rgba(0, 0, 0, 0.698);
 }
 
 :disabled {
@@ -277,5 +287,11 @@ textarea:focus, input:focus {
 @media (prefers-color-scheme: dark) {
   .label:before {
     background-color: rgba(255, 255, 255, 0.1);
+  }
+  textarea:hover, input:hover {
+    border: 1px solid rgba(255, 255, 255, 0.518);
+  }
+  textarea:focus, input:focus {
+    border: 1px solid rgba(255, 255, 255, 1);
   }
 }

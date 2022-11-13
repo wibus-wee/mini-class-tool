@@ -111,6 +111,14 @@ const NowLessonIndex = lessonsTime.find(item => { // 查找当前时间对应的
 
 但是这样的设计有点笨蛋，而且我也不确定是不是真的可以及时更新对应的课程节，这个地方未来还是需要继续改进
 
+## Workflow
+
+<img width="994" alt="截屏2022-11-13 11 47 03" src="https://user-images.githubusercontent.com/62133302/201504642-9e18a845-b1ed-4da7-8253-ff603908b503.png">
+
+创建 App 的时候，将会自动运行 `scripts/build-app.sh` 这个脚本文件将会删除 App 无需用到的两张图片，以及去除CSS相关变量 ~~（它们都是给线上使用的，虽然线上目前已经不打算继续支持了）~~
+
+在开发的时候，将会自动调取 周一 08:05 的列表，防止出现暂时的空数据问题
+
 ## Author
 
 Mini Class Tool © Wibus, Released under AGPLv3. Created on Nov 11, 2022

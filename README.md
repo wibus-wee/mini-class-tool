@@ -15,13 +15,23 @@
 ## Usage
 
 - 前往在线版本：[https://mini-class-tool.iucky.cn/](https://mini-class-tool.iucky.cn/)
-- 前往 Release 获取本地App 目前支持：Windows，Mac，Linux
+- 前往 Release 获取本地App 
+
 
 ## System Requirements
 
-- Windows 7+ / macOS 10.15+ / Linux (仅保证可支持 Ubuntu 20.04+)
+- Windows 7+ / macOS 10.15+
 - 10MB+ 硬盘空间
 - 1GB+ 内存
+
+
+> **Warning**
+>
+> 由于考虑到防止课堂爆破，会议号与密码都将需要自行填入，课程表目前填入的是我自己的课程表，可以自行修改
+> 
+> 使用前，请先阅读设置页面的底部信息，防止乱填出现严重错误
+
+若遇到任何报错提示，请务必联系我
 
 
 ## Principle
@@ -90,6 +100,16 @@ export const lessonsTime = [{
 ```
 
 至于你问我为什么有个`index`...这个嘛...设计失误咯 ~~（纯粹是想在某个地方懒一下）~~
+
+现在还有地方需要改进的是，这个预测列表的事情，我目前**查找当前时间对应的课程时间范围**是前后扩大了20分钟
+
+```ts
+const NowLessonIndex = lessonsTime.find(item => { // 查找当前时间对应的课程时间范围
+  return Time >= Number(transformTime(Number(item.start), "subtract", 20)) && Time <= Number(transformTime(Number(item.end), "add", 20))
+})?.index
+```
+
+但是这样的设计有点笨蛋，而且我也不确定是不是真的可以及时更新对应的课程节，这个地方未来还是需要继续改进
 
 ## Author
 

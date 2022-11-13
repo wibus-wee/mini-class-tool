@@ -1,5 +1,19 @@
 # CHANGELOG
 
+## [2.0.3](https://github.com/wibus-wee/mini-class-tool/compare/v2.0.2...v2.0.3) (2022-11-13)
+
+
+### Bug Fixes
+
+* missing writing password into clipboard [skip ci] ([9a2a1fd](https://github.com/wibus-wee/mini-class-tool/commit/9a2a1fd73c2aac5c3417e88b14d982534dc803d5))
+
+
+### Performance Improvements
+
+* label style improve [skip ci] ([0049892](https://github.com/wibus-wee/mini-class-tool/commit/0049892692de65976ab9ddfeefb300c5dacc0615))
+
+
+
 ## [2.0.2](https://github.com/wibus-wee/mini-class-tool/compare/v2.0.1...v2.0.2) (2022-11-13)
 
 

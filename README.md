@@ -10,7 +10,7 @@
 - [x] 自动获取课堂密码并自动复制进入剪贴板（✨新功能）
 - [x] 自定义配置（✨新功能）
 - [x] 原生夜间模式
-- [x] 电脑端 Tauri App
+- [x] 电脑端 Tauri App（✨新功能）
 
 ## Usage
 
@@ -20,7 +20,7 @@
 
 ## System Requirements
 
-- Windows 7+ / macOS 10.15+
+- Windows （不保证） / macOS 10.15+
 - 10MB+ 硬盘空间
 - 1GB+ 内存
 
@@ -32,6 +32,14 @@
 > 使用前，请先阅读设置页面的底部信息，防止乱填出现严重错误
 
 若遇到任何报错提示，请务必联系我
+
+## Workflow
+
+<img width="994" alt="截屏2022-11-13 11 47 03" src="https://user-images.githubusercontent.com/62133302/201504642-9e18a845-b1ed-4da7-8253-ff603908b503.png">
+
+创建 App 的时候，将会自动运行 `scripts/build-app.sh` 这个脚本文件将会删除 App 无需用到的两张图片，以及去除CSS相关变量，添加专属于 app 微调的样式。
+
+在开发的时候，将会自动调取 周一 08:05 的列表，防止出现暂时的空数据问题
 
 
 ## Principle
@@ -110,14 +118,6 @@ const NowLessonIndex = lessonsTime.find(item => { // 查找当前时间对应的
 ```
 
 但是这样的设计有点笨蛋，而且我也不确定是不是真的可以及时更新对应的课程节，这个地方未来还是需要继续改进
-
-## Workflow
-
-<img width="994" alt="截屏2022-11-13 11 47 03" src="https://user-images.githubusercontent.com/62133302/201504642-9e18a845-b1ed-4da7-8253-ff603908b503.png">
-
-创建 App 的时候，将会自动运行 `scripts/build-app.sh` 这个脚本文件将会删除 App 无需用到的两张图片，以及去除CSS相关变量 ~~（它们都是给线上使用的，虽然线上目前已经不打算继续支持了）~~
-
-在开发的时候，将会自动调取 周一 08:05 的列表，防止出现暂时的空数据问题
 
 ## Author
 

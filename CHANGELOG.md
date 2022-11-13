@@ -1,5 +1,26 @@
 # CHANGELOG
 
+# [2.1.0](https://github.com/wibus-wee/mini-class-tool/compare/v2.0.6...v2.1.0) (2022-11-13)
+
+
+### Bug Fixes
+
+* updater invalid ([5c622f7](https://github.com/wibus-wee/mini-class-tool/commit/5c622f707e6a93d0b1c07136c152af911225db08))
+
+
+### Features
+
+* updater server [skip ci] ([a475988](https://github.com/wibus-wee/mini-class-tool/commit/a4759886e14693e58d73b97f73337833dcdd7e38))
+
+
+### Performance Improvements
+
+* online web style ([8fc5fb5](https://github.com/wibus-wee/mini-class-tool/commit/8fc5fb5bbd4bf242afdd44abb9638de88f82254e))
+* style in development [skip ci] ([315d3ab](https://github.com/wibus-wee/mini-class-tool/commit/315d3ab531f0a79933db695a767c643e5812d69e))
+* support windows 7 ([e8015ab](https://github.com/wibus-wee/mini-class-tool/commit/e8015ab211a4dc45e6043c14a623edb34567412f))
+
+
+
 ## [2.0.6](https://github.com/wibus-wee/mini-class-tool/compare/v2.0.5...v2.0.6) (2022-11-13)
 
 

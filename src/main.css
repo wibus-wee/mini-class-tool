@@ -306,3 +306,13 @@ textarea:focus, input:focus {
 .dev .header {
   margin-top: 25px;
 }
+
+@media (max-width: 768px) {
+  .wrapper {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .settings.wrapper {
+    margin-top: 0;
+  }
+}

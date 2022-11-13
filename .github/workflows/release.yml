@@ -94,3 +94,21 @@ jobs:
               draft: false,
               prerelease: false
             })
+
+  updater:
+      runs-on: ubuntu-latest
+      needs: [create-release, build-tauri]
+
+      steps:
+        - uses: actions/checkout@v2
+        - run: pnpm i
+        - run: pnpm run updater
+          env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+        - name: Deploy install.json
+          uses: peaceiris/actions-gh-pages@v3
+          with:
+            github_token: ${{ secrets.GITHUB_TOKEN }}
+            publish_dir: ./updater
+            force_orphan: true

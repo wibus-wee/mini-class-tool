@@ -56,7 +56,10 @@
     "updater": {
       "active": true,
       "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDE3RDU5MzIxNDQ1NDg5MkUKUldRdWlWUkVJWlBWRjRtdmk1RFJVeGNRV0Z2M0V1VktNMTRlb1ltSkJub1ZmTW9vYmZsd0dvQTkK",
-      "endpoints": ["https://mini-class-tool-updater.iucky.cn/{{target}}/{{arch}}/{{current_version}}"],
+      "endpoints": [
+        "https://mini-class-tool-updater.iucky.cn/install.json",
+        "https://wibus-wee.github.io/mini-class-tool/install.json"
+      ],
       "dialog": true
     },
     "windows": [

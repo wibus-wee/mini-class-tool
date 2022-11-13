@@ -7,7 +7,8 @@
     "dev": "cross-env NODE_ENV=development vite",
     "build": "tsc && cross-env NODE_ENV=production vite build",
     "build:app": "sh scripts/build-app.sh",
-    "preview": "cross-env NODE_ENV=production vite preview"
+    "preview": "cross-env NODE_ENV=production vite preview",
+    "updater": "node scripts/updater.mjs"
   },
   "bump": {
     "before": [
@@ -28,12 +29,14 @@
     "valtio": "^1.7.5"
   },
   "devDependencies": {
+    "@actions/github": "^5.1.1",
     "@tauri-apps/cli": "^1.2.0",
     "@types/node": "^18.11.9",
     "@types/react": "^18.0.24",
     "@types/react-dom": "^18.0.8",
     "@vitejs/plugin-react": "^2.2.0",
     "cross-env": "^7.0.3",
+    "node-fetch": "^3.3.0",
     "typescript": "^4.6.4",
     "vite": "^3.2.3"
   }

@@ -12,20 +12,8 @@ import { FridayLessons, MondayLessons, ThursdayLessons, TuesdayLessons, Wednesda
 import { useSnapshot } from 'valtio'
 import { Setting } from './components/setting'
 import { Sponsor } from './components/sponsor'
-import { checkUpdate, installUpdate } from '@tauri-apps/api/updater';
 
 function App() {
-
-  useEffect(() => {
-    checkUpdate().then(async (update) => {
-      if (update.shouldUpdate) {
-        message.loading('发现新版本，正在下载更新')
-        await installUpdate();
-      }
-    }).catch((err) => {
-      console.error(err);
-    });
-  }, [])
 
   useEffect(() => {
     window.addEventListener('error', (e) => {

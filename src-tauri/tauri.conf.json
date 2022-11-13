@@ -8,8 +8,8 @@
     "withGlobalTauri": true
   },
   "package": {
-    "productName": "课堂小公举",
-    "version": "2.0.0"
+    "productName": "Mini Class Tool",
+    "version": "../package.json"
   },
   "tauri": {
     "allowlist": {
@@ -30,7 +30,7 @@
         "icons/128x128@2x.png",
         "icons/icon.icns",
         "icons/icon.ico"
-      ],
+      ], 
       "identifier": "com.wibus.works.mini-class-tool",
       "longDescription": "",
       "macOS": {

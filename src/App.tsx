@@ -73,6 +73,10 @@ function App() {
               href={`wemeet://page/inmeeting?meeting_code=${
                 lessonsInfoSnapshot.data["班主任"]?.id?.replace(/-/g, "") || "0000000000"
               }`}
+              onClick={() => {
+                navigator.clipboard.writeText(lessonsInfoSnapshot.data["班主任"]?.password);
+                message.info(`已复制「本班」课堂密码`);
+              }}
               >课表小公举</a>
             <span>每 1 分钟刷新 &nbsp;&nbsp;&nbsp; By Wibus.</span>
           </h3>

@@ -1,5 +1,14 @@
 # CHANGELOG
 
+# [2.0.0-alpha.14](https://github.com/wibus-wee/mini-class-tool/compare/v2.0.0-alpha.13...v2.0.0-alpha.14) (2022-11-13)
+
+
+### Bug Fixes
+
+* build app on windows ([2badec3](https://github.com/wibus-wee/mini-class-tool/commit/2badec3f1ccbf572229112fa3e48b43fffe2d03a))
+
+
+
 # [2.0.0-alpha.13](https://github.com/wibus-wee/mini-class-tool/compare/v2.0.0-alpha.12...v2.0.0-alpha.13) (2022-11-13)
 
 

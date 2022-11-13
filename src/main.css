@@ -1,6 +1,6 @@
 :root {
   /* --root-background: rgb(37, 37, 37); */
-  --root-background: url("/screen_macos_desktop_light.jpg") no-repeat center center fixed;
+  /** only web **/ --root-background: url("/screen_macos_desktop_light.jpg") no-repeat center center fixed;
   --background-color: rgba(255, 255, 255, 0.8);
   --font-color: rgba(0, 0, 0, 0.85);
   --font-sub-color: rgba(0, 0, 0, 0.55);
@@ -10,7 +10,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     /* --root-background: rgb(221, 221, 221); */
-    --root-background: url("/screen_macos_desktop_dark.jpg") no-repeat center center fixed;
+    /** only web **/ --root-background: url("/screen_macos_desktop_dark.jpg") no-repeat center center fixed;
     --background-color: rgba(0, 0, 0, 0.45);
     --font-color: rgba(255, 255, 255, 0.85);
     --font-sub-color: rgba(255, 255, 255, 0.55);
@@ -19,7 +19,7 @@
 
 body {
   margin: 0;
-  /* background: var(--root-background); */
+  /** only web **/ background: var(--root-background);
   color: var(--font-color);
   -webkit-transition: all .3s;
   transition: all .3s;
@@ -28,8 +28,8 @@ body {
 }
 
 .wrapper {
-  /* margin-top: 30px; */
-  /* margin-left: 30px; */
+  /** only web **/ margin-top: 30px;
+  /** only web **/ margin-left: 30px;
   -webkit-transition: all .3s;
   transition: all .3s;
 }
@@ -104,7 +104,7 @@ body {
 }
 
 .header {
-  margin-top: 25px;
+  margin-top: 0px;
   margin-bottom: 20px;
   display: flex;
   align-items: center;

@@ -1,5 +1,14 @@
 # CHANGELOG
 
+## [2.0.5](https://github.com/wibus-wee/mini-class-tool/compare/v2.0.4...v2.0.5) (2022-11-13)
+
+
+### Performance Improvements
+
+* updater ([86b5cbb](https://github.com/wibus-wee/mini-class-tool/commit/86b5cbba09d1b764960be13eb5219a25defcfc86))
+
+
+
 ## [2.0.4](https://github.com/wibus-wee/mini-class-tool/compare/v2.0.3...v2.0.4) (2022-11-13)
 
 

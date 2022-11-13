@@ -28,7 +28,7 @@ jobs:
             const { data } = await github.rest.repos.createRelease({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              tag_name: `${process.env.PACKAGE_VERSION}`,
+              tag_name: `v${process.env.PACKAGE_VERSION}`,
               name: `MCT Desktop App v${process.env.PACKAGE_VERSION}`,
               body: 'Take a look at the assets to download and install this app.',
               draft: true,
@@ -101,6 +101,10 @@ jobs:
 
       steps:
         - uses: actions/checkout@v2
+        - uses: pnpm/action-setup@v2.2.4
+          with:
+            version: latest
+            run_install: true
         - run: pnpm i
         - run: pnpm run updater
           env:

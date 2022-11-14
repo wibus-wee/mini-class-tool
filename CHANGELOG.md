@@ -1,5 +1,30 @@
 # CHANGELOG
 
+# [2.2.0](https://github.com/wibus-wee/mini-class-tool/compare/v2.1.1...v2.2.0) (2022-11-14)
+
+
+### Bug Fixes
+
+* **item:** clipboard value import wrongly [skip ci] ([252ceef](https://github.com/wibus-wee/mini-class-tool/commit/252ceef628d2f9eedc64c30cf5e3cec20afdb6f4))
+* **types:** define global tauri type ([8d06ea0](https://github.com/wibus-wee/mini-class-tool/commit/8d06ea0955a613b6f0ee728a5c63136999f052f0))
+
+
+### Features
+
+* custom updater dialog ([#3](https://github.com/wibus-wee/mini-class-tool/issues/3)) ([1708127](https://github.com/wibus-wee/mini-class-tool/commit/17081278d419e986b8c2f568439dab9e064680f0))
+* env util ([fa096ef](https://github.com/wibus-wee/mini-class-tool/commit/fa096ef1a432def4315c333183adc545811d6389))
+* **hooks:** use promise hook ([fc94384](https://github.com/wibus-wee/mini-class-tool/commit/fc94384af410410e1c9d65bda0b3b68499af1a8e))
+* store app data with local file ([#2](https://github.com/wibus-wee/mini-class-tool/issues/2)) ([70c62bb](https://github.com/wibus-wee/mini-class-tool/commit/70c62bba85e4d1f4b8a5018a396577feb8105b8b))
+
+
+### Performance Improvements
+
+* control style with `isApp` [skip ci] ([a47d770](https://github.com/wibus-wee/mini-class-tool/commit/a47d770615320130ad886abfbbc0c4ca05196e39))
+* style in phones [skip ci] ([caf64d3](https://github.com/wibus-wee/mini-class-tool/commit/caf64d3b8c05c70d2b5127565baef69847a3c61a))
+* use tauri cliboard ipc api [skip ci] ([0cc703b](https://github.com/wibus-wee/mini-class-tool/commit/0cc703b41d24c2308d7b4332876c87b2fe7f32aa))
+
+
+
 ## [2.1.1](https://github.com/wibus-wee/mini-class-tool/compare/v2.1.0...v2.1.1) (2022-11-13)
 
 

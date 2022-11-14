@@ -13,7 +13,25 @@
   },
   "tauri": {
     "allowlist": {
-      "all": true
+      "all": true,
+      "clipboard": {
+        "all": true,
+        "readText": true,
+        "writeText": true
+      },
+      "fs": {
+        "all": false,
+        "copyFile": true,
+        "createDir": true,
+        "exists": true,
+        "readDir": true,
+        "readFile": true,
+        "removeDir": false,
+        "removeFile": false,
+        "renameFile": false,
+        "scope": ["$APPDATA/*", "$APPDATA"],
+        "writeFile": true
+      }
     },
     "macOSPrivateApi": true,
     "bundle": {

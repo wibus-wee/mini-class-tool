@@ -3,14 +3,18 @@
  * @author: Wibus
  * @Date: 2022-11-10 23:34:25
  * @LastEditors: Wibus
- * @LastEditTime: 2022-11-12 22:32:10
+ * @LastEditTime: 2022-11-14 15:17:52
  * Coding With IU
  */
 
 import message from "react-message-popup";
 import { lessons } from "../constants/lessonsInfo";
+import { isApp } from "../utils/env";
 import { insert } from "../utils/insert";
 import { lessonsTime } from "../utils/lesson";
+import { readText, writeText } from '@tauri-apps/api/clipboard';
+import { useSnapshot } from "valtio";
+import { lessonsInfo } from "../states";
 
 export const Item = (props: {
   index: number; // 第几节课
@@ -28,9 +32,11 @@ export const Item = (props: {
     <div>
       <a
         href={`wemeet://page/inmeeting?meeting_code=${dumpid}`}
-        onClick={() => {
-          navigator.clipboard.writeText(lesson.password);
+        onClick={async () => {
+          message.info(lesson.password);
+          isApp ? await writeText(lesson.password) : navigator.clipboard.writeText(lesson.password);
           message.info(`已复制「${name}」课堂密码`);
+          message.info(await readText() || "复制失败");
         }} className="appItem" style={{
           cursor: "pointer",
         }}>

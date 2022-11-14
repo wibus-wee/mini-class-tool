@@ -3,7 +3,7 @@
  * @author: Wibus
  * @Date: 2022-11-14 15:55:04
  * @LastEditors: Wibus
- * @LastEditTime: 2022-11-14 18:26:09
+ * @LastEditTime: 2022-11-14 18:45:08
  * Coding With IU
  */
 
@@ -16,7 +16,7 @@ export const Install = (props: any) => {
 
   const [manifest, setManifest] = useState<UpdateManifest | null | undefined>(null)
 
-  const [className, setClassname] = useState("show")
+  const [className, setClassname] = useState("hide")
   useImperativeHandle(props.cRef, () => ({
     open: () => {
       console.log('open')
@@ -68,10 +68,7 @@ export const Install = (props: any) => {
               e.currentTarget.classList.add("loading")
               e.currentTarget.setAttribute("disabled", "true")
               await installUpdate()
-              message.loading("Relaunching")
-              setTimeout(async () => {
-                await relaunch()
-              }, 1000)
+              await relaunch()
             }}>
               Update
             </button>

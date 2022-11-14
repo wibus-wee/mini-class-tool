@@ -1,5 +1,14 @@
 # CHANGELOG
 
+## [2.2.2](https://github.com/wibus-wee/mini-class-tool/compare/v2.2.1...v2.2.2) (2022-11-14)
+
+
+### Performance Improvements
+
+* updater loading animate ([a4147b1](https://github.com/wibus-wee/mini-class-tool/commit/a4147b1fbe5e1755b9cf7b32906d85ad936cde08))
+
+
+
 ## [2.2.1](https://github.com/wibus-wee/mini-class-tool/compare/v2.2.0...v2.2.1) (2022-11-14)
 
 

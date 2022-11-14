@@ -3,7 +3,7 @@
  * @author: Wibus
  * @Date: 2022-11-11 22:56:27
  * @LastEditors: Wibus
- * @LastEditTime: 2022-11-14 15:09:36
+ * @LastEditTime: 2022-11-14 17:01:35
  * Coding With IU
  */
 
@@ -91,7 +91,7 @@ export const Setting: React.FC<PropsWithRef<any>> = (props) => {
             <span>Tips: 点击关闭自动保存</span>
           </h3>
           <span className="svg" onClick={() => {
-            saveAction()
+            isApp && saveAction()
             setClassname("hide")
           }}>
             <FontAwesomeIcon icon={faXmark} />

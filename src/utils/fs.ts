@@ -3,13 +3,14 @@
  * @author: Wibus
  * @Date: 2022-11-14 10:08:23
  * @LastEditors: Wibus
- * @LastEditTime: 2022-11-14 15:05:25
+ * @LastEditTime: 2022-11-14 17:00:55
  * Coding With IU
  */
 
 import { fs } from '@tauri-apps/api';
 import { BaseDirectory, exists } from '@tauri-apps/api/fs';
 import message from 'react-message-popup';
+import { isApp } from './env';
 
 class appStorage {
   constructor() {
@@ -19,12 +20,14 @@ class appStorage {
   dir = BaseDirectory.AppData;
 
   async init() {
-    if (!(await exists('', { dir: this.dir }))) {
-      await fs.createDir('', { dir: this.dir, recursive: true });
-    }
-    if (!await exists('config.json', { dir: this.dir })){
-      message.loading("正在初始化配置文件");
-      await fs.writeTextFile("config.json", '{}', { dir: this.dir });
+    if (isApp) {
+      if (!(await exists('', { dir: this.dir }))) {
+        await fs.createDir('', { dir: this.dir, recursive: true });
+      }
+      if (!await exists('config.json', { dir: this.dir })) {
+        message.loading("正在初始化配置文件");
+        await fs.writeTextFile("config.json", '{}', { dir: this.dir });
+      }
     }
   }
 

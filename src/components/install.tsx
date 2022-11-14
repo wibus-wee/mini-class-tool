@@ -3,7 +3,7 @@
  * @author: Wibus
  * @Date: 2022-11-14 15:55:04
  * @LastEditors: Wibus
- * @LastEditTime: 2022-11-14 16:43:33
+ * @LastEditTime: 2022-11-14 17:51:52
  * Coding With IU
  */
 
@@ -31,7 +31,7 @@ export const Install = (props: any) => {
         setManifest(manifest)
       }
     }).catch((err) => {
-      message.error(err)
+      console.warn(err, "检查更新错误")
     })
   }, [])
 

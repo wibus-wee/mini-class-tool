@@ -14,6 +14,7 @@ import { Setting } from './components/setting'
 import { Sponsor } from './components/sponsor'
 import AppStorage from './utils/fs'
 import { isApp } from './utils/env'
+import { Install } from './components/install'
 
 function App() {
 
@@ -153,6 +154,10 @@ function App() {
       <Sponsor
         cRef={childSponsorRef}
       />
+
+      {
+        isApp && <Install />
+      }
     </>
   )
 }

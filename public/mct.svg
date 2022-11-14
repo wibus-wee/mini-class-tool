@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512px" height="512px" viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>App Store@1x</title>
+    <defs>
+        <radialGradient cx="106.831024%" cy="-11.6408052%" fx="106.831024%" fy="-11.6408052%" r="138.533896%" gradientTransform="translate(1.068310,-0.116408),scale(1.000000,0.982833),rotate(131.756001),translate(-1.068310,0.116408)" id="radialGradient-1">
+            <stop stop-color="#0BAFF2" offset="0%"></stop>
+            <stop stop-color="#0577E1" offset="100%"></stop>
+        </radialGradient>
+    </defs>
+    <g id="App-Store" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="矩形" fill="url(#radialGradient-1)" x="29" y="22" width="458" height="466" rx="86"></rect>
+        <rect id="矩形" stroke="#FFFFFF" stroke-width="4" x="60.6083916" y="56" width="391.391608" height="397" rx="79"></rect>
+        <g id="M" transform="translate(125.250000, 117.475000)" fill="#FFFFFF" fill-rule="nonzero">
+            <path d="M147.375,103.95 C147.375,79.2 146.7,58.05 145.8,40.5 C144.45,19.575 138.843193,10.0477824 138.843193,9.37278237 C123.093193,14.3227824 103.275,30.15 69.525,58.95 C53.325,43.65 41.4,33.3 33.75,27.675 C31.275,29.025 29.475,30.6 28.35,32.4 C27,33.525 25.65,35.55 24.75,38.25 C28.35,42.975 35.1,49.725 44.775,58.5 C57.825,70.2 65.925,76.725 69.525,78.3 C73.8,74.7 93.6,59.625 128.7,33.075 C129.15,58.95 130.5,96.75 132.3,146.7 C133.2,147.15 135.675,147.375 139.275,147.375 C142.875,147.375 145.35,147.15 146.7,146.25 C147.15,134.55 147.375,120.6 147.375,103.95 Z M20.25,1.575 C18.225,0.675 15.75,-2.84217094e-14 12.6,-2.84217094e-14 C11.025,-2.84217094e-14 8.55,0.225 5.175,0.675 C3.825,5.625 2.475,26.55 1.125,63.9 C0.225,91.125 0,114.3 0,133.2 C0,144.45 0,149.85 0,149.85 C3.15,150.525 5.625,150.75 7.425,150.75 C11.025,150.75 13.725,150.525 15.3,149.85 L18.225,72 C19.575,33.3 20.25,9.675 20.25,1.575 Z" id="形状"></path>
+        </g>
+        <text id="C" font-family="DFWaWaSC-W5, Wawati SC" font-size="225" font-weight="normal" fill="#FFFFFF">
+            <tspan x="219" y="399">C</tspan>
+        </text>
+        <text id="T" font-family="DFWaWaSC-W5, Wawati SC" font-size="225" font-weight="normal" fill="#FFFFFF">
+            <tspan x="258" y="274">T</tspan>
+        </text>
+    </g>
+</svg>

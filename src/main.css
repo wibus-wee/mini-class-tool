@@ -267,7 +267,7 @@ textarea:focus, input:focus {
   font-size: 12px;
   opacity: 0;
   margin-left: 0px;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.198);
   padding: 5px 10px;
   border-radius: 5px;
   position: absolute;
@@ -281,6 +281,81 @@ textarea:focus, input:focus {
 
 .label:hover:before {
   opacity: 1;
+}
+
+.install.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 10px;
+}
+
+.install__icon {
+  margin-left: auto;
+  margin-top: -20px;
+  transition: all .3s;
+  margin-right: auto;
+}
+
+.install__icon img {
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.install__title {
+  margin-top: 20px;
+  font-size: 14px;
+  margin: 0;
+}
+
+/* raycast */
+button.install__action__button {
+  margin-top: 20px;
+  padding: 8px 25px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.115);
+  color: var(--font-color);
+  font-size: 12px;
+  cursor: pointer;
+  transition: all .3s;
+  color: rgba(0, 0, 0, 0.744);
+}
+
+button.install__action__button:hover {
+  background-color: rgba(0, 0, 0, 0.342);
+}
+
+button.install__action__button.active {
+  color: #ff0000;
+}
+
+button.install__action__button:disabled {
+  background-color: rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.install__description {
+  margin-top: 20px;
+  font-size: 11px;
+  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  opacity: .5;
+}
+
+.install__action {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 5px;
 }
 
 @media (prefers-color-scheme: dark) {

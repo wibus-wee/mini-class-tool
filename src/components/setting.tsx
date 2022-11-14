@@ -3,7 +3,7 @@
  * @author: Wibus
  * @Date: 2022-11-11 22:56:27
  * @LastEditors: Wibus
- * @LastEditTime: 2022-11-12 22:58:20
+ * @LastEditTime: 2022-11-14 15:09:36
  * Coding With IU
  */
 
@@ -12,6 +12,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { PropsWithRef, useEffect, useImperativeHandle, useState } from "react"
 import { useSnapshot } from "valtio"
 import { lessonsInfo, lessonsList } from "../states"
+import { appDataDir } from '@tauri-apps/api/path';
+import { isApp, isDev } from "../utils/env"
+import AppStorage from "../utils/fs"
+import message from "react-message-popup"
+
+const appDataDirPath = isDev && isApp ? await appDataDir() : ''
 
 const InfoSettingItem = (props: any) => {
   return (
@@ -68,13 +74,11 @@ export const Setting: React.FC<PropsWithRef<any>> = (props) => {
     return () => { window.removeEventListener('keydown', handleKeyDown) }
   }, [])
 
-  const [lessons, setLessons] = useState<any>(lessonsInfoSnapshot.data)
-  const [_lessonsList, _setLessonsList] = useState<any>(lessonsListSnapshot.data)
-
-  useEffect(() => {
-    setLessons(lessonsInfoSnapshot.data)
-    _setLessonsList(lessonsListSnapshot.data)
-  }, [lessonsListSnapshot, lessonsInfoSnapshot])
+  const saveAction = async () => {
+    await AppStorage.setItem('lessonsInfo', lessonsInfo.data)
+    await AppStorage.setItem('lessonsList', lessonsList.data)
+    message.success('保存成功')
+  }
 
   const lessonsNameList = ['语文', '数学', '英语', '物理', '化学', '政治', '历史', '地理', '生物', '班主任']
 
@@ -87,11 +91,22 @@ export const Setting: React.FC<PropsWithRef<any>> = (props) => {
             <span>Tips: 点击关闭自动保存</span>
           </h3>
           <span className="svg" onClick={() => {
+            saveAction()
             setClassname("hide")
           }}>
             <FontAwesomeIcon icon={faXmark} />
           </span>
         </div>
+        {
+          isDev && isApp && (
+            <>
+              <div className="setting">
+                <span>应用数据文件夹</span>
+                <input name="appDataDir" id="appDataDir" value={appDataDirPath} disabled></input>
+              </div>
+            </>
+          )
+        }
         <div className="setting">
           <span>课程列表 JSON</span>
           <textarea disabled name="lessonsList" id="lessonsList" value={JSON.stringify(lessonsListSnapshot.data, null, 2)}>
@@ -112,31 +127,31 @@ export const Setting: React.FC<PropsWithRef<any>> = (props) => {
             name="周一的课程"
             id="monday"
             index={1}
-            lessonsList={_lessonsList}
+            lessonsList={lessonsListSnapshot.data}
           />
           <ListSettingItem
             name="周二的课程"
             id="tuesday"
             index={2}
-            lessonsList={_lessonsList}
+            lessonsList={lessonsListSnapshot.data}
           />
           <ListSettingItem
             name="周三的课程"
             id="wednesday"
             index={3}
-            lessonsList={_lessonsList}
+            lessonsList={lessonsListSnapshot.data}
           />
           <ListSettingItem
             name="周四的课程"
             id="thursday"
             index={4}
-            lessonsList={_lessonsList}
+            lessonsList={lessonsListSnapshot.data}
           />
           <ListSettingItem
             name="周五的课程"
             id="friday"
             index={5}
-            lessonsList={_lessonsList}
+            lessonsList={lessonsListSnapshot.data}
           />
         </div>
 
@@ -150,7 +165,7 @@ export const Setting: React.FC<PropsWithRef<any>> = (props) => {
                     name={`${item} ID`}
                     subject={item}
                     type="id"
-                    lessonsInfo={lessons}
+                    lessonsInfo={lessonsInfoSnapshot.data}
                   />
                 )
               })
@@ -165,7 +180,7 @@ export const Setting: React.FC<PropsWithRef<any>> = (props) => {
                     name={`${item} 密码`}
                     subject={item}
                     type="password"
-                    lessonsInfo={lessons}
+                    lessonsInfo={lessonsInfoSnapshot.data}
                   />
                 )
               })

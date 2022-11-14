@@ -1,5 +1,19 @@
 # CHANGELOG
 
+## [2.2.1](https://github.com/wibus-wee/mini-class-tool/compare/v2.2.0...v2.2.1) (2022-11-14)
+
+
+### Bug Fixes
+
+* call tauri in web ([8b4ab75](https://github.com/wibus-wee/mini-class-tool/commit/8b4ab758d4aeb77fb0dbf1db7913f378865151fe))
+
+
+### Performance Improvements
+
+* echo error in console with warning ([a9b17c8](https://github.com/wibus-wee/mini-class-tool/commit/a9b17c80a1929f2128f16e566bf2c0e35283cc12))
+
+
+
 # [2.2.0](https://github.com/wibus-wee/mini-class-tool/compare/v2.1.1...v2.2.0) (2022-11-14)
 
 

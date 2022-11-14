@@ -295,18 +295,6 @@ textarea:focus, input:focus {
   }
 }
 
-/* only app dev */
-
-.dev.wrapper {
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-}
-
-.dev .header {
-  margin-top: 25px;
-}
-
 @media (max-width: 768px) {
   .wrapper {
     margin-left: auto;

@@ -68,6 +68,17 @@ function App() {
           body {
             ${process.env.NODE_ENV === 'development' ? '' : 'background: var(--root-background);'}
           }
+          ${isApp ? `
+            .wrapper {
+              margin-left: 0;
+              margin-right: 0;
+              margin-top: 0;
+            }
+            .header {
+              margin-top: 25px;
+            }
+            ` : ''
+          }
         `}
       </style>
       <div data-tauri-drag-region className={`wrapper ${

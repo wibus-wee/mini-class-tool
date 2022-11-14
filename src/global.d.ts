@@ -1,9 +1,9 @@
 /*
- * @FilePath: /mini-class-tool/src/types.d.ts
+ * @FilePath: /mini-class-tool/global.d.ts
  * @author: Wibus
  * @Date: 2022-11-14 15:20:24
  * @LastEditors: Wibus
- * @LastEditTime: 2022-11-14 15:20:25
+ * @LastEditTime: 2022-11-14 15:33:22
  * Coding With IU
  */
 
@@ -12,3 +12,5 @@ declare global {
     __TAURI__: any;
   }
 }
+
+export {}

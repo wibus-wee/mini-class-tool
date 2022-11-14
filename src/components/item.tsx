@@ -17,8 +17,9 @@ export const Item = (props: {
   name: string; // 课程名
   prefix: string; // 课程前缀
 }) => {
+  const lessonsInfoSnapshot = useSnapshot(lessonsInfo)
   const name = props.name as keyof typeof lessons;
-  const lesson = lessons[name];
+  const lesson = lessonsInfoSnapshot.data[name];
   if (!lesson) return <div></div>;
   const dumpid = lesson.id?.replace(/-/g, "") || "0000000000";
   const startTime = insert(String(lessonsTime[props.index - 1].start), 2, ":");

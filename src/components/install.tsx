@@ -3,7 +3,7 @@
  * @author: Wibus
  * @Date: 2022-11-14 15:55:04
  * @LastEditors: Wibus
- * @LastEditTime: 2022-11-14 17:51:52
+ * @LastEditTime: 2022-11-14 18:26:09
  * Coding With IU
  */
 
@@ -16,7 +16,7 @@ export const Install = (props: any) => {
 
   const [manifest, setManifest] = useState<UpdateManifest | null | undefined>(null)
 
-  const [className, setClassname] = useState("hide")
+  const [className, setClassname] = useState("show")
   useImperativeHandle(props.cRef, () => ({
     open: () => {
       console.log('open')
@@ -63,9 +63,15 @@ export const Install = (props: any) => {
             }}>
               Cancel
             </button>
-            <button className="install__action__button active" onClick={async () => {
+            <button className="install__action__button active" onClick={async (e) => {
+              e.currentTarget.innerText = ""
+              e.currentTarget.classList.add("loading")
+              e.currentTarget.setAttribute("disabled", "true")
               await installUpdate()
-              await relaunch()
+              message.loading("Relaunching")
+              setTimeout(async () => {
+                await relaunch()
+              }, 1000)
             }}>
               Update
             </button>

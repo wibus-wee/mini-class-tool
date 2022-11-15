@@ -1,5 +1,14 @@
 # CHANGELOG
 
+## [2.2.4](https://github.com/wibus-wee/mini-class-tool/compare/v2.2.3...v2.2.4) (2022-11-15)
+
+
+### Performance Improvements
+
+* transform the class over time ([7e97f73](https://github.com/wibus-wee/mini-class-tool/commit/7e97f73b1149acf908766f6c7ec55b3c94cb9a45))
+
+
+
 ## [2.2.3](https://github.com/wibus-wee/mini-class-tool/compare/v2.2.2...v2.2.3) (2022-11-15)
 
 

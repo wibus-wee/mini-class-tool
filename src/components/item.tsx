@@ -3,7 +3,7 @@
  * @author: Wibus
  * @Date: 2022-11-10 23:34:25
  * @LastEditors: Wibus
- * @LastEditTime: 2022-11-14 15:17:52
+ * @LastEditTime: 2022-11-15 08:01:00
  * Coding With IU
  */
 
@@ -33,10 +33,10 @@ export const Item = (props: {
       <a
         href={`wemeet://page/inmeeting?meeting_code=${dumpid}`}
         onClick={async () => {
-          message.info(lesson.password);
+          // message.info(lesson.password);
           isApp ? await writeText(lesson.password) : navigator.clipboard.writeText(lesson.password);
           message.info(`已复制「${name}」课堂密码`);
-          message.info(await readText() || "复制失败");
+          // message.info(await readText() || "复制失败");
         }} className="appItem" style={{
           cursor: "pointer",
         }}>

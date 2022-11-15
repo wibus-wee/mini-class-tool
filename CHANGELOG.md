@@ -1,5 +1,15 @@
 # CHANGELOG
 
+## [2.2.3](https://github.com/wibus-wee/mini-class-tool/compare/v2.2.2...v2.2.3) (2022-11-15)
+
+
+### Bug Fixes
+
+* classname uncorrect ([12f30b1](https://github.com/wibus-wee/mini-class-tool/commit/12f30b1f6753d761584dfb4da7891b0fafe26f96))
+* remove some development messages output ([ad6704f](https://github.com/wibus-wee/mini-class-tool/commit/ad6704f66ac9b3c2fea4b2f22c4b7dcd643a76b5))
+
+
+
 ## [2.2.2](https://github.com/wibus-wee/mini-class-tool/compare/v2.2.1...v2.2.2) (2022-11-14)
 
 

@@ -1,5 +1,21 @@
 # CHANGELOG
 
+# [2.3.0](https://github.com/wibus-wee/mini-class-tool/compare/v2.2.4...v2.3.0) (2023-01-20)
+
+
+### Bug Fixes
+
+* **deps:** update rust crate tauri to 1.2.3 [security] ([#4](https://github.com/wibus-wee/mini-class-tool/issues/4)) ([aaf3d84](https://github.com/wibus-wee/mini-class-tool/commit/aaf3d84a57b6711d088e7311e811f6c5c80c02e1))
+* **deps:** update rust crate tauri to 1.2.4 ([#11](https://github.com/wibus-wee/mini-class-tool/issues/11)) ([c8e640e](https://github.com/wibus-wee/mini-class-tool/commit/c8e640e83f00ac9f1fbeba648e277692047b38c4))
+
+
+### Performance Improvements
+
+* increase the class period ([b38a8e9](https://github.com/wibus-wee/mini-class-tool/commit/b38a8e9e12a459ecc23265c2bfa704e822555d61))
+* remove some notice popup ([54ebabb](https://github.com/wibus-wee/mini-class-tool/commit/54ebabb594e6590c536d820fc163795dddc443d0))
+
+
+
 ## [2.2.4](https://github.com/wibus-wee/mini-class-tool/compare/v2.2.3...v2.2.4) (2022-11-15)
 
 

@@ -3,7 +3,7 @@
  * @author: Wibus
  * @Date: 2022-11-10 23:34:25
  * @LastEditors: Wibus
- * @LastEditTime: 2022-11-15 08:01:00
+ * @LastEditTime: 2022-11-22 08:48:26
  * Coding With IU
  */
 
@@ -35,7 +35,7 @@ export const Item = (props: {
         onClick={async () => {
           // message.info(lesson.password);
           isApp ? await writeText(lesson.password) : navigator.clipboard.writeText(lesson.password);
-          message.info(`已复制「${name}」课堂密码`);
+          // message.info(`已复制「${name}」课堂密码`);
           // message.info(await readText() || "复制失败");
         }} className="appItem" style={{
           cursor: "pointer",

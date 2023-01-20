@@ -72,7 +72,7 @@ function App() {
   useEffect(() => {
     const timer = setInterval(() => {
       setData(generateLessonsList(lessonsListProxy))
-      message.info('Auto Update')
+      // message.info('Auto Update')
     }, 1000 * 60 * 1)
     return () => {
       clearInterval(timer)
@@ -114,7 +114,7 @@ function App() {
                 }`}
               onClick={() => {
                 navigator.clipboard.writeText(lessonsInfoSnapshot.data["班主任"]?.password);
-                message.info(`已复制「本班」课堂密码`);
+                // message.info(`已复制「本班」课堂密码`);
               }}
             >课表小公举</a>
             <span>每 1 分钟刷新 &nbsp;&nbsp;&nbsp; By Wibus.</span>

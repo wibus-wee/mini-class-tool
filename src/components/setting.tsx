@@ -3,7 +3,7 @@
  * @author: Wibus
  * @Date: 2022-11-11 22:56:27
  * @LastEditors: Wibus
- * @LastEditTime: 2022-11-14 17:01:35
+ * @LastEditTime: 2022-11-22 08:48:33
  * Coding With IU
  */
 
@@ -77,7 +77,7 @@ export const Setting: React.FC<PropsWithRef<any>> = (props) => {
   const saveAction = async () => {
     await AppStorage.setItem('lessonsInfo', lessonsInfo.data)
     await AppStorage.setItem('lessonsList', lessonsList.data)
-    message.success('保存成功')
+    // message.success('保存成功')
   }
 
   const lessonsNameList = ['语文', '数学', '英语', '物理', '化学', '政治', '历史', '地理', '生物', '班主任']

@@ -1,0 +1,35 @@
+{
+  "version": "v2.3.0",
+  "notes": "",
+  "pub_date": "2023-01-20T08:49:08.781Z",
+  "platforms": {
+    "win64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRdWlWUkVJWlBWRis4WGNjQ1hnMmY0UnpMbVpoL1g3UHBpYjlhNUdaYkRPK1hxNi9zSFJjYU1peWQ0NTd1QlpBMjB0OHhqcXhtYVlVV3ZUM0RESTFtSWFCZGJxc3BrWHdZPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNjc0MjAzOTc4CWZpbGU6TWluaSBDbGFzcyBUb29sXzIuMy4wX3g2NF96aC1DTi5tc2kuemlwCmNTWEJ4b0E0c2doTU5ueHVybkhCYUxROFk4a0Q1ejNlQlNYdlQ1Y3puOTNxY0tNOWFPano0ZEt6MjJYMmt6NVVJTllZdWM1V2s2SEVmOENWRDJ4aUFRPT0K",
+      "url": "https://ghproxy.com/https://github.com/wibus-wee/mini-class-tool/releases/download/v2.3.0/Mini.Class.Tool_2.3.0_x64_zh-CN.msi.zip"
+    },
+    "linux": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRdWlWUkVJWlBWRjUwMyt3ZGpkVlk5ZUhBR091TkN2cElFSFdsVTVYd21nNWVCZmFrZkpsVnZuMFJjMFB1bnA0UkNNb2JkelI4RFZOTi80OStlL3BQd3NYYk9RQW9mY3cwPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNjc0MjAzODMwCWZpbGU6bWluaS1jbGFzcy10b29sXzIuMy4wX2FtZDY0LkFwcEltYWdlLnRhci5negpRUzI1WXZZLzdORHN6dU5kWEpYd3pRUEZLK1BhYmMvWmc4bEZDUEE5TDFYTmZnaDQvTis1MTlrckgySVB2RjV0TU9HNjE5QzdiY3o0Y0p2OHMzUGRCUT09Cg==",
+      "url": "https://ghproxy.com/https://github.com/wibus-wee/mini-class-tool/releases/download/v2.3.0/mini-class-tool_2.3.0_amd64.AppImage.tar.gz"
+    },
+    "darwin": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRdWlWUkVJWlBWRjUrWnV5cTJnR1haWVNwQlJXTlhwVWtDenVmdzZOeXJ1ZFZaalN0ZDBXcjBDZFI5MFFidzljSlBma09JQW90WCs2Q0ZCMGNwYnN4Q1JTd1BaWjlHS2dJPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNjc0MjA0NTE0CWZpbGU6TWluaSBDbGFzcyBUb29sLmFwcC50YXIuZ3oKa3J2c2hrc3h5UmJoK2ZFWVU1dk1CaXl4eDlrOEkxNTMyaGVKem03UW8zL3pSWTlLbXI4TDRFZkVTUWsvMzdrSlhFQ0lzc3BLMk0vVFFRK284RHNoQ1E9PQo=",
+      "url": "https://ghproxy.com/https://github.com/wibus-wee/mini-class-tool/releases/download/v2.3.0/Mini.Class.Tool.app.tar.gz"
+    },
+    "darwin-aarch64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRdWlWUkVJWlBWRjUrWnV5cTJnR1haWVNwQlJXTlhwVWtDenVmdzZOeXJ1ZFZaalN0ZDBXcjBDZFI5MFFidzljSlBma09JQW90WCs2Q0ZCMGNwYnN4Q1JTd1BaWjlHS2dJPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNjc0MjA0NTE0CWZpbGU6TWluaSBDbGFzcyBUb29sLmFwcC50YXIuZ3oKa3J2c2hrc3h5UmJoK2ZFWVU1dk1CaXl4eDlrOEkxNTMyaGVKem03UW8zL3pSWTlLbXI4TDRFZkVTUWsvMzdrSlhFQ0lzc3BLMk0vVFFRK284RHNoQ1E9PQo=",
+      "url": "https://ghproxy.com/https://github.com/wibus-wee/mini-class-tool/releases/download/v2.3.0/Mini.Class.Tool.app.tar.gz"
+    },
+    "darwin-x86_64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRdWlWUkVJWlBWRjUrWnV5cTJnR1haWVNwQlJXTlhwVWtDenVmdzZOeXJ1ZFZaalN0ZDBXcjBDZFI5MFFidzljSlBma09JQW90WCs2Q0ZCMGNwYnN4Q1JTd1BaWjlHS2dJPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNjc0MjA0NTE0CWZpbGU6TWluaSBDbGFzcyBUb29sLmFwcC50YXIuZ3oKa3J2c2hrc3h5UmJoK2ZFWVU1dk1CaXl4eDlrOEkxNTMyaGVKem03UW8zL3pSWTlLbXI4TDRFZkVTUWsvMzdrSlhFQ0lzc3BLMk0vVFFRK284RHNoQ1E9PQo=",
+      "url": "https://ghproxy.com/https://github.com/wibus-wee/mini-class-tool/releases/download/v2.3.0/Mini.Class.Tool.app.tar.gz"
+    },
+    "linux-x86_64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRdWlWUkVJWlBWRjUwMyt3ZGpkVlk5ZUhBR091TkN2cElFSFdsVTVYd21nNWVCZmFrZkpsVnZuMFJjMFB1bnA0UkNNb2JkelI4RFZOTi80OStlL3BQd3NYYk9RQW9mY3cwPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNjc0MjAzODMwCWZpbGU6bWluaS1jbGFzcy10b29sXzIuMy4wX2FtZDY0LkFwcEltYWdlLnRhci5negpRUzI1WXZZLzdORHN6dU5kWEpYd3pRUEZLK1BhYmMvWmc4bEZDUEE5TDFYTmZnaDQvTis1MTlrckgySVB2RjV0TU9HNjE5QzdiY3o0Y0p2OHMzUGRCUT09Cg==",
+      "url": "https://ghproxy.com/https://github.com/wibus-wee/mini-class-tool/releases/download/v2.3.0/mini-class-tool_2.3.0_amd64.AppImage.tar.gz"
+    },
+    "windows-x86_64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRdWlWUkVJWlBWRis4WGNjQ1hnMmY0UnpMbVpoL1g3UHBpYjlhNUdaYkRPK1hxNi9zSFJjYU1peWQ0NTd1QlpBMjB0OHhqcXhtYVlVV3ZUM0RESTFtSWFCZGJxc3BrWHdZPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNjc0MjAzOTc4CWZpbGU6TWluaSBDbGFzcyBUb29sXzIuMy4wX3g2NF96aC1DTi5tc2kuemlwCmNTWEJ4b0E0c2doTU5ueHVybkhCYUxROFk4a0Q1ejNlQlNYdlQ1Y3puOTNxY0tNOWFPano0ZEt6MjJYMmt6NVVJTllZdWM1V2s2SEVmOENWRDJ4aUFRPT0K",
+      "url": "https://ghproxy.com/https://github.com/wibus-wee/mini-class-tool/releases/download/v2.3.0/Mini.Class.Tool_2.3.0_x64_zh-CN.msi.zip"
+    }
+  }
+}

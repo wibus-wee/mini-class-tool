@@ -1,5 +1,9 @@
-# Mini Class Tool [![wakatime](https://wakatime.com/badge/user/5c293fcd-9bec-4609-946b-c06b5fbf192c/project/8ea691d5-14bb-43b9-9c88-0d9d66af3cfa.svg)](https://wakatime.com/badge/user/5c293fcd-9bec-4609-946b-c06b5fbf192c/project/8ea691d5-14bb-43b9-9c88-0d9d66af3cfa)
+# 🔚 Mini Class Tool [![wakatime](https://wakatime.com/badge/user/5c293fcd-9bec-4609-946b-c06b5fbf192c/project/8ea691d5-14bb-43b9-9c88-0d9d66af3cfa.svg)](https://wakatime.com/badge/user/5c293fcd-9bec-4609-946b-c06b5fbf192c/project/8ea691d5-14bb-43b9-9c88-0d9d66af3cfa)
 网课助手 | 快速获取网课信息并生成课程表 | Quick get course information and generate course table
+
+<pre align="center">
+🤚 此项目已停止继续维护
+</pre>
 
 ## Features
 

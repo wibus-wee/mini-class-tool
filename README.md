@@ -1,8 +1,15 @@
-# 🔚 Mini Class Tool [![wakatime](https://wakatime.com/badge/user/5c293fcd-9bec-4609-946b-c06b5fbf192c/project/8ea691d5-14bb-43b9-9c88-0d9d66af3cfa.svg)](https://wakatime.com/badge/user/5c293fcd-9bec-4609-946b-c06b5fbf192c/project/8ea691d5-14bb-43b9-9c88-0d9d66af3cfa)
-网课助手 | 快速获取网课信息并生成课程表 | Quick get course information and generate course table
+# Mini Class Tool 
+
+上课助手 | 快速获取上课信息并生成课程表 | Quick get course information and generate course table
+
+
+> [!NOTE]
+> 事实上，三年之期过后，再也没有这种情况了，不过现在与之而来的是大学的课程，所以这个项目也就不再是一个中学生在网课阶段的上课助手了，而是一个大学生的上课助手了。
+>
+> 目前精力还不是很充沛来维护这个项目，所以这个项目的维护可能会比较慢，不过我会尽量保证这个项目的可用性。
 
 <pre align="center">
-🤚 此项目已停止继续维护
+✅ 此项目已重启维护状态
 </pre>
 
 ## Features
@@ -10,15 +17,16 @@
 - [x] 从 Ubesicht 迁移至 Web 端
 - [x] 每日课程表读取
 - [x] 自动更新预测列表
-- [x] 自动获取对应的课堂会议号并自动打开会议
-- [x] 自动获取课堂密码并自动复制进入剪贴板（✨新功能）
+- [x] ~~自动获取对应的课堂会议号并自动打开会议~~
+- [x] ~~自动获取课堂密码并自动复制进入剪贴板（✨新功能）~~
 - [x] 自定义配置（✨新功能）
 - [x] 原生夜间模式
 - [x] 电脑端 Tauri App（✨新功能）
+- [x] 自动读取课程列表生成各个课程配置项（✨新功能）
 
 ## Usage
 
-- 前往在线版本：[https://mini-class-tool.iucky.cn/](https://mini-class-tool.iucky.cn/)
+- ~~前往在线版本：[https://mini-class-tool.iucky.cn/](https://mini-class-tool.iucky.cn/)~~
 - 前往 Release 获取本地App 
 
 
@@ -30,7 +38,7 @@
 
 > **Warning**
 >
-> 由于考虑到防止课堂爆破，会议号与密码都将需要自行填入，课程表目前填入的是我自己的课程表，可以自行修改
+> ~~由于考虑到防止课堂爆破，会议号与密码都将需要自行填入，课程表目前填入的是我自己的课程表，可以自行修改~~ 此设计已被废弃，现在会自动读取课程列表生成各个课程配置项，请自行填入
 > 
 > 使用前，请先阅读设置页面的底部信息，防止乱填出现严重错误
 
@@ -45,7 +53,7 @@
 在开发的时候，将会自动调取 周一 08:05 的列表，防止出现暂时的空数据问题
 
 
-## Principle
+## Principle (Old)
 
 实际上并不复杂，我们最需要考虑的就只是**课程的各种信息储存**，在 v1 版本中，我是直接硬编码的，非常滴粗暴：
 

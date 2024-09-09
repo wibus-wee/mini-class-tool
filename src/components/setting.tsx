@@ -20,6 +20,12 @@ import message from "react-message-popup"
 const appDataDirPath = isDev && isApp ? await appDataDir() : ''
 
 const InfoSettingItem = (props: any) => {
+  useEffect(() => {
+    // 如果是没有的课程，就直接创建一个空对象
+    if (!props.lessonsInfo[props.subject]) {
+      lessonsInfo.data[props.subject] = {}
+    }
+  }, [props.lessonsInfo])
   return (
     <div className="setting">
       <span>{props.name}</span>
@@ -77,10 +83,12 @@ export const Setting: React.FC<PropsWithRef<any>> = (props) => {
   const saveAction = async () => {
     await AppStorage.setItem('lessonsInfo', lessonsInfo.data)
     await AppStorage.setItem('lessonsList', lessonsList.data)
-    // message.success('保存成功')
+    message.success('保存成功')
   }
 
-  const lessonsNameList = ['语文', '数学', '英语', '物理', '化学', '政治', '历史', '地理', '生物', '班主任']
+  // 从 lessonsList.data 里面，拿到全部的课程名字，然后去重形成一个数组
+  const lessonsNameList = Array.from(new Set(Object.values(lessonsList.data).flat
+    ())).filter(item => item !== '午休时间').filter(item => item !== '无')
 
   return (
     <div className={`settingsWrapper ${className}`}>
@@ -159,19 +167,20 @@ export const Setting: React.FC<PropsWithRef<any>> = (props) => {
           <div className="setListId">
             {
               lessonsNameList.map((item, index) => {
+                if (!item) return
                 return (
                   <InfoSettingItem
                     key={index}
-                    name={`${item} ID`}
+                    name={`${item} 教室`}
                     subject={item}
-                    type="id"
+                    type="location"
                     lessonsInfo={lessonsInfoSnapshot.data}
                   />
                 )
               })
             }
           </div>
-          <div className="setListPassword">
+          {/* <div className="setListPassword">
             {
               lessonsNameList.map((item, index) => {
                 return (
@@ -185,7 +194,7 @@ export const Setting: React.FC<PropsWithRef<any>> = (props) => {
                 )
               })
             }
-          </div>
+          </div> */}
         </div>
 
         <br />
@@ -206,7 +215,11 @@ export const Setting: React.FC<PropsWithRef<any>> = (props) => {
         </span>
         <br />
         <span className="tips">
-          5. 由于一些比较奇怪的原因，请把「午休时间」也加入到课程列表中，名字无所谓，有这个占位符就好了
+          5. 🆕 目前课程是动态配置的，程序会读取你的每日课程配置来生成课程设置，所以请保证你的课程配置是正确的
+        </span>
+        <br />
+        <span className="tips">
+          6. 🆕 遇到无课的时间段，请填写午休时间或无，否则排序会出现错误
         </span>
       </div>
     </div>

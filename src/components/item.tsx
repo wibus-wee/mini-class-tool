@@ -30,21 +30,22 @@ export const Item = (props: {
   const endTime = insert(String(lessonsTime[props.index - 1].end), 2, ":");
   return (
     <div>
-      <a
-        href={`wemeet://page/inmeeting?meeting_code=${dumpid}`}
+      <span
+        // href={`wemeet://page/inmeeting?meeting_code=${dumpid}`}
         onClick={async () => {
           // message.info(lesson.password);
-          isApp ? await writeText(lesson.password) : navigator.clipboard.writeText(lesson.password);
+          // isApp ? await writeText(lesson.password) : navigator.clipboard.writeText(lesson.password);
           // message.info(`已复制「${name}」课堂密码`);
           // message.info(await readText() || "复制失败");
         }} className="appItem" style={{
-          cursor: "pointer",
+          cursor: "default",
+          userSelect: "none",
         }}>
         <div style={{ position: "relative" }}>
           <h5>{props.prefix}课: {props.index} {name} &nbsp;&nbsp; {`${startTime} - ${endTime}`}</h5>
-          <p>会议号：{lesson?.id || "null"}</p>
+          <p>教室：{lesson?.location || "null"}</p>
         </div>
-      </a>
+      </span>
     </div>
   )
 }

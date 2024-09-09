@@ -254,7 +254,7 @@ textarea:focus, input:focus {
 }
 
 .settingsList > div {
-  width: 50%;
+  /* width: 50%; */
   margin-bottom: 20px;
 }
 

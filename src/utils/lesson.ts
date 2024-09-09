@@ -66,7 +66,7 @@ export function generateLessons(list: any, number: number = 1) {
   const Time = process.env.NODE_ENV === "development" ? "0805" : Number(getTime());
   const Today = getTodayLessonList(list) // 获取今天的课程列表
   const NowLessonIndex = lessonsTime.find(item => { // 查找当前时间对应的课程时间范围
-    return Time >= Number(transformTime(Number(item.start), "subtract", 20)) && Time <= Number(transformTime(Number(item.end), "subtract", 0))
+    return Number(Time) >= Number(transformTime(Number(item.start), "subtract", 20)) && Number(Time) <= Number(transformTime(Number(item.end), "subtract", 0))
   })?.index
 
   if (!NowLessonIndex) return null // 如果当前没有课程，将会返回 null

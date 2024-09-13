@@ -1,5 +1,14 @@
 # CHANGELOG
 
+## [2.3.1](https://github.com/wibus-wee/mini-class-tool/compare/v2.3.0...v2.3.1) (2024-09-13)
+
+
+### Features
+
+* hi, mini class tool comes back ([5069396](https://github.com/wibus-wee/mini-class-tool/commit/50693960b418fd6ea4389978ff603990e8615f19))
+
+
+
 # [2.3.0](https://github.com/wibus-wee/mini-class-tool/compare/v2.2.4...v2.3.0) (2023-01-20)
 
 

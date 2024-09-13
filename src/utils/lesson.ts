@@ -5,44 +5,40 @@ import { getTime, transformTime } from "./time";
  */
 export const lessonsTime = [{
   index: 1,
-  start: "0800",
-  end: "0840"
+  start: "0840",
+  end: "0920"
 }, {
   index: 2,
-  start: "0850",
-  end: "0930",
+  start: "0930",
+  end: "1010",
 }, {
   index: 3,
-  start: 1000,
-  end: 1040,
+  start: "1030",
+  end: "1110",
 }, {
   index: 4,
-  start: 1050,
-  end: 1130,
+  start: "1120",
+  end: "1200",
 }, {
   index: 5,
-  start: 1140,
-  end: 1220,
+  start: "1330",
+  end: "1410",
 }, {
   index: 6,
-  start: 1220,
-  end: 1425,
+  start: "1420",
+  end: "1500",
 }, {
   index: 7,
-  start: 1425,
-  end: 1505,
+  start: "1520",
+  end: "1600",
 }, {
   index: 8,
-  start: 1515,
-  end: 1555,
-}, {
-  index: 9,
-  start: 1610,
-  end: 1650,
-}, {
-  index: 10,
-  start: 1700,
-  end: 1740,
+  start: "1610",
+  end: "1650",
+}, {  
+  index: 9, 
+  start: "1900",
+  end: "1940",
 }]
 
 /**

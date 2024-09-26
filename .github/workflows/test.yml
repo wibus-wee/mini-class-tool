@@ -6,7 +6,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        platform: [macos-latest, windows-latest, ubuntu-latest]
+        platform: [macos-latest, windows-latest, ubuntu-latest, macos-13]
 
     runs-on: ${{ matrix.platform }}
     steps:
@@ -44,3 +44,12 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         TAURI_PRIVATE_KEY: ${{ secrets.TAURI_PRIVATE_KEY }}
+    - name: Zip
+      run: |
+        # src-tauri/target/release/bundle/macos
+        zip -r macos.zip src-tauri/target/release/bundle/macos
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: Bundle
+        path: macos.zip

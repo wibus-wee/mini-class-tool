@@ -49,7 +49,7 @@ jobs:
         # src-tauri/target/release/bundle/macos
         zip -r macos.zip src-tauri/target/release/bundle/macos
     - name: Upload artifacts
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v4
       with:
         name: Bundle
         path: macos.zip
